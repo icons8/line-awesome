@@ -1,0 +1,16 @@
+{
+  "name": "line-awesome",
+  "version": "0.9.0",
+  "description": "Line awesome icons pack",
+  "license": "MIT",
+  "keywords": [
+    "font",
+    "awesome",
+    "icons",
+    "icons8"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/icons8/line-awesome.git"
+  }
+}
