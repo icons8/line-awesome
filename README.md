@@ -3,7 +3,7 @@
 There is available a live [preview](https://icons8.com/line-awesome) of the icon set.
 
 
-## .Good Boy License
+## Good Boy License
 
 We’ve released the icon pack either under MIT or the [Good Boy License](https://icons8.com/good-boy-license/). We invented it. Please do _whatever your mom would approve of:_
 * Download
