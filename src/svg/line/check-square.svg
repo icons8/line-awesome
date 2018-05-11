@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="76px" viewBox="0 0 76 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>check-square</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="check-square" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0,0 L76,0 L70.0625,5.9375 L5.9375,5.9375 L5.9375,70.0625 L70.0625,70.0625 L70.0625,31.1271306 L76,24.9511261 C76,50.6382227 76,67.654514 76,76 C57,76 19,76 0,76 C0,63.3333333 0,38 0,0 Z M76,7 L76,15.3019014 L33.1212252,55 L15,37.5250749 L19.7272761,32.8650949 L33.1212252,46.2625369 L76,7 Z" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="48px" viewBox="0 0 76 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>bars</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="bars" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(0.000000, -14.000000)">
+        <path d="M0,14 L76,14 L76,20 L0,20 L0,14 Z M0,35 L76,35 L76,41 L0,41 L0,35 Z M0,56 L76,56 L76,62 L0,62 L0,56 Z" fill="#000000"></path>
+    </g>
+</svg>

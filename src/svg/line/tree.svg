@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="76px" viewBox="0 0 76 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>tree</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="tree---f1bb" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M45.5217391,59 L47,76 L30,76 L31.4782609,59 L29.5,59 C13.2075999,59 0,45.7924001 0,29.5 C0,13.2075999 13.2075999,0 29.5,0 C38.3172474,0 46.2310057,3.86829713 51.6367569,10.0003737 C65.104808,10.0739854 76,21.0146385 76,34.5 C76,48.0309764 65.0309764,59 51.5,59 L45.5217391,59 Z M45,53 L49.3684211,53 C60.7629275,53 70,45.5183016 70,33.8220339 C70,22.165196 60.8251015,14.7080213 49.4835848,14.6443908 C44.9313732,9.34378227 38.2671557,6 30.8421053,6 C17.1221894,6 6,15.4167389 6,29.5 C6,43.5832611 17.1221894,53 30.8421053,53 L32,53 L45,53 Z" id="tree" fill="#000000"></path>
+    </g>
+</svg>

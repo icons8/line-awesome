@@ -716,10 +716,14 @@
 .fa-scissors:before {
   content: "\f0c4";
 }
-.fa-copy:before,
-.fa-files-o:before {
+.fa-copy:before {
   content: "\f0c5";
 }
+
+.fa-files-o:before {
+  content: "\f397";
+}
+
 .fa-paperclip:before {
   content: "\f0c6";
 }
@@ -730,10 +734,14 @@
 .fa-square:before {
   content: "\f0c8";
 }
-.fa-navicon:before,
-.fa-reorder:before,
 .fa-bars:before {
   content: "\f0c9";
+}
+.fa-reorder:before {
+  content: "\f394";
+}
+.fa-navicon:before {
+	content: "\f393";
 }
 .fa-list-ul:before {
   content: "\f0ca";
@@ -812,9 +820,11 @@
 .fa-gavel:before {
   content: "\f0e3";
 }
-.fa-dashboard:before,
+.fa-dashboard:before{
+	content: "\f0e4";
+}
 .fa-tachometer:before {
-  content: "\f0e4";
+	content: "\f396";
 }
 .fa-comment-o:before {
   content: "\f0e5";
@@ -1118,15 +1128,29 @@
 .fa-compass:before {
   content: "\f14e";
 }
-.fa-toggle-down:before,
+
 .fa-caret-square-o-down:before {
   content: "\f150";
 }
-.fa-toggle-up:before,
+
+.fa-toggle-down:before{
+	content: "\f398";
+}
+.fa-toggle-up:before{
+	content: "\f401";
+}
+
+.fa-toggle-left:before{
+	content: "\f399";
+}
+.fa-toggle-right:before{
+	content: "\f400";
+}
+
 .fa-caret-square-o-up:before {
   content: "\f151";
 }
-.fa-toggle-right:before,
+
 .fa-caret-square-o-right:before {
   content: "\f152";
 }
@@ -1350,10 +1374,14 @@
 .fa-openid:before {
   content: "\f19b";
 }
-.fa-institution:before,
-.fa-bank:before,
-.fa-university:before {
+.fa-bank:before {
   content: "\f19c";
+}
+.fa-institution:before {
+	content: "\f391";
+}
+.fa-university:before {
+	content: "\f392";
 }
 .fa-mortar-board:before,
 .fa-graduation-cap:before {
@@ -1900,9 +1928,11 @@
 .fa-hourglass:before {
   content: "\f254";
 }
-.fa-hand-grab-o:before,
-.fa-hand-rock-o:before {
+.fa-hand-grab-o:before{
   content: "\f255";
+}
+.fa-hand-rock-o:before {
+  content: "\f390";
 }
 .fa-hand-stop-o:before,
 .fa-hand-paper-o:before {
@@ -2137,9 +2167,11 @@
 .fa-glide-g:before {
   content: "\f2a6";
 }
-.fa-signing:before,
 .fa-sign-language:before {
   content: "\f2a7";
+}
+.fa-signing:before {
+  content: "\f395";
 }
 .fa-low-vision:before {
   content: "\f2a8";

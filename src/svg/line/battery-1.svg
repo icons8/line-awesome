@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="47px" viewBox="0 0 76 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>battery-1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="battery-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(0.000000, -15.000000)">
+        <path d="M0,15 L70,15 L70,30 L76,30 L76,47 L70,47 L70,62 L0,62 L0,15 Z M11,26 C14.25,26 20.75,26 24,26 C24,32.25 24,44.75 24,51 C20.75,51 14.25,51 11,51 C11,44.75 11,32.25 11,26 Z M6,21 L6,56 L64,56 L64,21 L6,21 Z" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="76px" viewBox="0 0 70 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>sign-out</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="sign-out---f08b" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-6.000000, 0.000000)">
+        <path d="M6,0 L70,0 L70,26 L64,20 L64,6 L12,6 L12,70 L64,70 L64,55 L70,49 L70,76 L6,76 L6,0 Z M60.516129,22 L76,37.625 L60.516129,53.25 L56.2580645,48.953125 L64.1935489,40.75 L36.1935489,40.75 L36.1935489,34.5 L64.1935489,34.5 L56.2580645,26.296875 L60.516129,22 Z" id="sign-out" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>

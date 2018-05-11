@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="70px" viewBox="0 0 76 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>commenting</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="commenting" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(0.000000, -3.000000)">
+        <path d="M38,35 C35.790861,35 34,33.209139 34,31 C34,28.790861 35.790861,27 38,27 C40.209139,27 42,28.790861 42,31 C42,33.209139 40.209139,35 38,35 Z M52,35 C49.790861,35 48,33.209139 48,31 C48,28.790861 49.790861,27 52,27 C54.209139,27 56,28.790861 56,31 C56,33.209139 54.209139,35 52,35 Z M24,35 C21.790861,35 20,33.209139 20,31 C20,28.790861 21.790861,27 24,27 C26.209139,27 28,28.790861 28,31 C28,33.209139 26.209139,35 24,35 Z M0,3 L76,3 L76,60.3663102 L48.0480774,60.3663102 L38,73 L27.9519226,60.3663102 L0,60.3663102 L0,3 Z M6,9 L6,54.6660365 L30.4222028,54.6660365 L38.0769231,63.9328622 L45.7316434,54.6660365 L70.1538462,54.6660365 L70.1538462,9 L6,9 Z" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>

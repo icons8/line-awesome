@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="68px" viewBox="0 0 76 68" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>terminal</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="terminal---f120" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(0.000000, -4.000000)">
+        <path d="M0,4 L76,4 L76,72 L0,72 L0,4 Z M6,10 L6,16 L70,16 L70,10 L6,10 Z M6,22 L6,66 L70,66 L70,22 L6,22 Z M22.9583333,31.34375 L36.0208333,44.625 L22.9583333,57.90625 L18.2083333,53.21875 L27.1145828,44.625 L18.2083333,36.03125 L22.9583333,31.34375 Z M38,51 L57,51 L57,57 L38,57 L38,51 Z" id="terminal" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>

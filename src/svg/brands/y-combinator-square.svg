@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="76px" viewBox="0 0 76 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>y-combinator-square</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="y-combinator-square---f1d4" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M76,0 L76,76 L0,76 L0,0 L76,0 Z M6,6 L6,70 L70,70 L70,6 L6,6 Z M40.0357143,43.34375 L53.1830357,18.6607143 L47.6357143,18.6607143 L39.8660714,34.0982143 C39.06875,35.6758929 38.3392857,37.2026786 37.6946429,38.6446429 L35.625,34.0982143 L27.9571429,18.6607143 L22.0196429,18.6607143 L35.03125,43.0553571 L35.03125,59.0866071 L40.0357143,59.0866071 L40.0357143,43.34375 Z" id="y-combinator-square" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>

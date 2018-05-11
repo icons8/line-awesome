@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="51px" viewBox="0 0 76 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>quote-left</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="quote-left---f10d" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(0.000000, -13.000000)">
+        <path d="M76,64 L44,64 L44,32.125 C44,26.8125 45.8666667,22.296875 49.6,18.578125 C53.3333333,14.859375 57.8666667,13 63.2,13 L63.2,19.375 C59.5999997,19.375 56.5666662,20.6035155 54.0999997,23.0605466 C51.6333332,25.5175777 50.4,28.5390622 50.4,32.125 L76,32.125 L76,64 Z M32,64 L0,64 L0,32.125 C0,26.8125 1.86666667,22.296875 5.6,18.578125 C9.33333333,14.859375 13.8666667,13 19.2,13 L19.2,19.375 C15.5999997,19.375 12.5666662,20.6035155 10.0999997,23.0605466 C7.63333325,25.5175777 6.4,28.5390622 6.4,32.125 L32,32.125 L32,64 Z M70,58 L70,39 L51,39 L51,58 L70,58 Z M25,58 L25,39 L6,39 L6,58 L25,58 Z" id="quote-left" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="51px" viewBox="0 0 76 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>folder-open</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="folder-open---f07c" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(0.000000, -13.000000)">
+        <path d="M6,64 L0,23 L6,23 L6,13 L30,13 L33,17 L70,17 L70,23 L76,23 L70,64 L6,64 Z M10,58 L66,58 L70,29 L6,29 L10,58 Z M10,17 L10,23 L66,23 L66,21 L30,21 L27,17 L10,17 Z" id="folder-open" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>

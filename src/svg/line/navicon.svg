@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="48px" viewBox="0 0 12 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>navicon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="navicon---f0c9" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-32.000000, -14.000000)">
+        <path d="M32,14 L44,14 L44,20 L32,20 L32,14 Z M32,35 L44,35 L44,41 L32,41 L32,35 Z M32,56 L44,56 L44,62 L32,62 L32,56 Z" id="navicon" fill="#000000"></path>
+    </g>
+</svg>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="52px" viewBox="0 0 76 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>laptop</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="laptop---f109" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(0.000000, -12.000000)">
+        <path d="M0,57 L33,57 C33,58.3333333 33.6666667,59 35,59 C36,59 40,59 41,59 C42.3333333,59 43,58.3333333 43,57 L76,57 C75.3333333,61.6666667 73,64 69,64 C65,64 11,64 7,64 C3,64 0.666666667,61.6666667 0,57 Z M11,12 L65,12 C68.3137085,12 71,14.6862915 71,18 L71,54 L65,54 L65,20 C65,18.8954305 64.1045695,18 63,18 L13,18 C11.8954305,18 11,18.8954305 11,20 L11,54 L5,54 L5,18 C5,14.6862915 7.6862915,12 11,12 Z" id="laptop" fill="#000000"></path>
+    </g>
+</svg>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="62px" height="76px" viewBox="0 0 62 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>book</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="book" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-7.000000, 0.000000)">
+        <path d="M16,0 L69,0 L69,76 L16,76 C11.0294373,76 7,71.9705627 7,67 L7,9 C7,4.02943725 11.0294373,9.13077564e-16 16,0 Z M13,19 L13,61 C13,65.9705627 17.0294373,70 22,70 L63,70 L63,21 L53,21 L53,36 L48,33 L43.0068359,36 L43.0068359,21 C26.5629682,21 17.8940229,21 17,21 C15,21 13.6666667,20.3333333 13,19 Z M17.5,6 C15.0147186,6 13,8.01471863 13,10.5 C13,12.9852814 15.0147186,15 17.5,15 L63,15 L63,6 L17.5,6 Z" fill="#000000"></path>
+    </g>
+</svg>

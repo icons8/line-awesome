@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="72px" viewBox="0 0 76 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>area-chart</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="area-chart" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(0.000000, -2.000000)">
+        <path d="M0,74 L0,22 L18,27 L37,14 L56,17 L76,2 L76,74 L0,74 Z M6,31 L6,43 L18,49 L37,35 L56,41 L70,31 L70,14 L56,24 L37,21 L18,34 L6,31 Z M6,50 L6,68 L70,68 L70,38 L56,48 L37,42 L18,56 L6,50 Z" fill="#000000"></path>
+    </g>
+</svg>

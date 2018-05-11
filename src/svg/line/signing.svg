@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64px" height="69px" viewBox="0 0 64 69" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>signing</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="signing---f2a7" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-8.000000, -1.000000)">
+        <g id="signing" transform="translate(6.000000, 0.000000)">
+            <path d="M30.5,20.5 C30.5,-6 15.5,4 14.5,20.5 C13.5795809,35.6869159 19,49.4882813 20.5,60 C22.3960228,73.2869721 10.2325038,72.4823917 7,55.0117188 C4.5,41.5 14.5,32.5 29.5,60 C35.2883551,70.6119843 28.3125229,48.8288806 28.5,47 C28.7983529,44.0895015 33.7892255,55.8152501 35.5,57.5 C36.6508214,58.6333149 34.1194496,48.948135 35.5,48 C37.4613321,46.6529955 39.9765625,55.5039062 41,54 C42.182634,52.2621599 40.3526047,48.6196656 42,47 C43.1649733,45.854636 44.7677584,49.7860679 46.5,49.5 C48.5745603,49.1574005 47.8250066,43.9277763 52,43 C56.5,42 56,46.5546875 56,49.7851563" id="Path-4" stroke="#000000" stroke-width="3" stroke-linecap="round" transform="translate(31.316835, 36.652535) rotate(11.000000) translate(-31.316835, -36.652535) "></path>
+            <path d="M20.2788288,72.2584395 C37.6481135,69.9009092 40.6757417,54.0316475 63.2255847,54.7419855" id="Path-5" stroke="#000000" stroke-width="3" stroke-linecap="round" transform="translate(41.752207, 63.488647) rotate(11.000000) translate(-41.752207, -63.488647) "></path>
+            <circle id="Oval-4" fill="#000000" cx="58.5" cy="52.5" r="1.5"></circle>
+            <circle id="Oval-4-Copy" fill="#000000" cx="64.5" cy="52.5" r="1.5"></circle>
+        </g>
+    </g>
+</svg>

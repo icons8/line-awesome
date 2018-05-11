@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="56px" height="76px" viewBox="0 0 56 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>clipboard</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="clipboard---f0ea" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-10.000000, 0.000000)">
+        <path d="M23.5121171,6 C24.7476263,2.50442288 28.0813435,7.19845517e-16 32,0 L44,0 C47.9186565,-7.19845517e-16 51.2523737,2.50442288 52.4878829,6 L66,6 L66,76 L10,76 L10,6 L23.5121171,6 Z M23,12 L16,12 L16,70 L60,70 L60,12 L53,12 L53,18 L23,18 L23,12 Z M33,6 C30.790861,6 29,7.790861 29,10 L29,12 L47,12 L47,10 C47,7.790861 45.209139,6 43,6 L33,6 Z" id="clipboard" fill="#000000"></path>
+    </g>
+</svg>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="64px" viewBox="0 0 76 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>image</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="image---f03e" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(0.000000, -6.000000)">
+        <path d="M0,6 L76,6 L76,70 L0,70 L0,6 Z M6,12 L6,64 L70,64 L70,12 L6,12 Z M6,44 L24,30 L39,46 L53,39 L70,49.5 L70,55.5 L53,45 L38,53 L24,38 L6,52 L6,44 Z M57.25,18 C58.942708,18 60.4075517,18.6184897 61.644531,19.855469 C62.8815103,21.0924483 63.5,22.557292 63.5,24.25 C63.5,25.942708 62.8815103,27.4075517 61.644531,28.644531 C60.4075517,29.8815103 58.942708,30.5 57.25,30.5 C55.557292,30.5 54.0924483,29.8815103 52.855469,28.644531 C51.6184897,27.4075517 51,25.942708 51,24.25 C51,22.557292 51.6184897,21.0924483 52.855469,19.855469 C54.0924483,18.6184897 55.557292,18 57.25,18 Z" id="image" fill="#000000"></path>
+    </g>
+</svg>

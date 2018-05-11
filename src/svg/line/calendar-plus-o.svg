@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="76px" viewBox="0 0 76 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>calendar-plus-o</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="calendar-plus-o" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M35,44 L35,29 L41,29 L41,44 L56,44 L56,50 L41,50 L41,65 L35,65 L35,50 L20,50 L20,44 L35,44 Z M14,0 L20,0 L20,4 L56,4 L56,0 L62,0 L62,4 L76,4 L76,76 L0,76 L0,4 L14,4 L14,0 Z M6,10 C6,15 6,18.3333333 6,20 C21,20 55,20 70,20 C70,17.5 70,12.5 70,10 C68.8888889,10 66.2222222,10 62,10 L62,14 L56,14 L56,10 L20,10 L20,14 L14,14 L14,10 L6,10 Z M6,24 L6,70 L70,70 L70,24 L6,24 Z" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>

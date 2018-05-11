@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="76px" viewBox="0 0 76 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>map-signs</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="map-signs---f277" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M31,0 L37,0 L37,6 L64,6 L76,20 L64,34 L0,34 L0,6 L31,6 L31,0 Z M6,12 L6,28 L60.9375,28 L68,20 L60.9375,12 L6,12 Z M31,38 C32.5029297,38 35.5087892,38 37.011719,38 C37.011719,47.5 37.011719,66.5 37.011719,76 C35.5087892,76 32.5029297,76 31,76 C31,66.5 31,47.5 31,38 Z" id="map-signs" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>

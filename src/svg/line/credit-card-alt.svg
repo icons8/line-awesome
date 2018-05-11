@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="60px" viewBox="0 0 76 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>credit-card-alt</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="credit-card-alt---f283" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(0.000000, -8.000000)">
+        <path d="M5,8 L59,8 C61.7614237,8 64,10.2385763 64,13 L64,51 C64,53.7614237 61.7614237,56 59,56 L5,56 C2.23857625,56 3.38176876e-16,53.7614237 0,51 L0,13 C-3.38176876e-16,10.2385763 2.23857625,8 5,8 Z M58,21 L6,21 L6,16 C6,14.8954305 6.8954305,14 8,14 L56,14 C57.1045695,14 58,14.8954305 58,16 L58,21 Z M32,42 L54,42 L54,45 L32,45 L32,42 Z M58,30 L58,48 C58,49.1045695 57.1045695,50 56,50 L8,50 C6.8954305,50 6,49.1045695 6,48 L6,30 L58,30 Z M18,59 L18,60 C18,61.1045695 18.8954305,62 20,62 L68,62 C69.1045695,62 70,61.1045695 70,60 L70,42 L67,42 L67,33 L70,33 L70,28 C70,26.8954305 69.1045695,26 68,26 L67,26 L67,20 L71,20 C73.7614237,20 76,22.2385763 76,25 L76,63 C76,65.7614237 73.7614237,68 71,68 L17,68 C14.2385763,68 12,65.7614237 12,63 L12,59 L18,59 Z" id="credit-card-alt" fill="#000000"></path>
+    </g>
+</svg>

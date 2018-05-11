@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="65px" viewBox="0 0 76 65" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>shopping-basket</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="shopping-basket---f291" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(0.000000, -5.000000)">
+        <path d="M29.5658537,9.71736068 L19.6487805,19.5417509 L57.2780488,19.5417509 L47.3609756,9.71736068 L51.2536585,5.82467775 L65.0634146,19.6344338 L76,19.6344338 L76,36 L70,36 L64,70 L12,70 L6,36 L0,36 L0,19.6344338 L11.8634146,19.6344338 L25.6731707,5.82467775 L29.5658537,9.71736068 Z M12,36 L17,64 L59,64 L64,36 L12,36 Z M6,25 L6,30 L70,30 L70,25 L6,25 Z" id="shopping-basket" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>

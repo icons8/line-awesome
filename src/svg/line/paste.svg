@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="66px" height="76px" viewBox="0 0 66 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>paste</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="paste---f0ea" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-10.000000, 0.000000)" opacity="0.699999988">
+        <path d="M66,67 L66,76 L10,76 L10,6 L23.5121171,6 C24.7476263,2.50442288 28.0813435,7.19845517e-16 32,0 L44,0 C47.9186565,-7.19845517e-16 51.2523737,2.50442288 52.4878829,6 L66,6 L66,25 L76,25 L76,67 L66,67 Z M60,67 L34,67 L34,25 L60,25 L60,12 L53,12 L53,18 L23,18 L23,12 L16,12 L16,70 L60,70 L60,67 Z M33,6 C30.790861,6 29,7.790861 29,10 L29,12 L47,12 L47,10 C47,7.790861 45.209139,6 43,6 L33,6 Z M40,31 L40,61 L70,61 L70,31 L40,31 Z" id="paste" fill="#000000"></path>
+    </g>
+</svg>

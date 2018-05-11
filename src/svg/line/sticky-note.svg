@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="76px" viewBox="0 0 76 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>sticky-note</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="sticky-note---f249" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M44,44 L44,68 L68,44 L44,44 Z M0,0 L76,0 L76,44.0086365 L44.0074158,76 L0,76 L0,0 Z M6,6 L6,70 L37.9976959,70 L37.9976959,38.005249 L70,38.005249 L70,6 L6,6 Z" id="sticky-note" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>

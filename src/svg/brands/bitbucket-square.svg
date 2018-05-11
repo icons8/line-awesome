@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="76px" viewBox="0 0 76 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>bitbucket-square</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="bitbucket-square---f172" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0,0 L76,0 L76,76 L0,76 L0,0 Z M10.8855902,12.0001252 L65.1137668,12.0237805 C65.2301612,12.0237805 65.3349163,12.0356081 65.4396713,12.0474358 C66.452303,12.2130229 67.1390303,13.1828906 66.9760781,14.2118966 L59.084534,63.414941 C58.9332212,64.3374981 58.1417389,65.0116744 57.2222227,64.9998468 L19.3823854,64.9998468 C18.1602436,64.9880191 17.1126935,64.0891173 16.9148229,62.8590412 L9.02327889,14.200069 C9.01163945,14.0817924 9,13.9753435 9,13.8688946 C9.01163945,12.8162333 9.84967952,11.9882975 10.8855902,12.0001252 Z M44.9624204,48 L48,30 L29,30 L32.4006369,48 L44.9624204,48 Z" id="bitbucket-square" fill="#000000"></path>
+    </g>
+</svg>

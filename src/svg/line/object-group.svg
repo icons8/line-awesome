@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="76px" viewBox="0 0 76 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>object-group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="object-group---f247" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M72,62 L76,62 L76,76 L62,76 L62,72 L14,72 L14,76 L0,76 L0,62 L4,62 L4,14 L0,14 L0,0 L14,0 L14,4 L62,4 L62,0 L76,0 L76,14 L72,14 L72,62 Z M66,62 L66,14 L62,14 L62,10 L14,10 L14,14 L10,14 L10,62 L14,62 L14,66 L62,66 L62,62 L66,62 Z M30,32 L59,32 L59,60 L30,60 L30,32 Z M36,38 L36,54 L53,54 L53,38 L36,38 Z M45,29 L39,29 L39,22 L22,22 L22,38 L27,38 L27,44 L16,44 L16,16 L45,16 L45,29 Z" id="object-group" fill="#000000"></path>
+    </g>
+</svg>

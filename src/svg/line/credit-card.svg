@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="52px" viewBox="0 0 76 52" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>credit-card</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="credit-card---f09d" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(0.000000, -12.000000)">
+        <path d="M6,35 L6,56 C6,57.1045695 6.8954305,58 8,58 L68,58 C69.1045695,58 70,57.1045695 70,56 L70,35 L6,35 Z M6,25 L70,25 L70,20 C70,18.8954305 69.1045695,18 68,18 L8,18 C6.8954305,18 6,18.8954305 6,20 L6,25 Z M5,12 L71,12 C73.7614237,12 76,14.2385763 76,17 L76,59 C76,61.7614237 73.7614237,64 71,64 L5,64 C2.23857625,64 3.38176876e-16,61.7614237 0,59 L0,17 C-3.38176876e-16,14.2385763 2.23857625,12 5,12 Z M41,50 L63,50 L63,53 L41,53 L41,50 Z" id="credit-card" fill="#000000"></path>
+    </g>
+</svg>

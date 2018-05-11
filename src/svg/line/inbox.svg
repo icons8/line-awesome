@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="76px" viewBox="0 0 76 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>inbox</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="inbox---f01c" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M7.34090909,0 L68.6590909,0 L76,34.9318182 L76,76 L0,76 L0,34.9318182 L7.34090909,0 Z M13,6 L6,38 C22.0909091,38 30.4242424,38 31,38 C31,41 31.979248,48 38,48 C44.020752,48 45,41.0689364 45,38 C45.5757576,38 53.9090909,38 70,38 L63,6 L13,6 Z M6,42 L6,70 L70,70 L70,41.7272727 C58.3200758,41.9090909 50.9867425,42 48,42 C48,46.5 44.3710938,52.1818182 38,52.1818182 C31.6289062,52.1818182 28,46.1818182 28,42 C24.0176766,42 16.6843433,42 6,42 Z" id="inbox" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>

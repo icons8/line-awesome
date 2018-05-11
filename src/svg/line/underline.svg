@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="76px" viewBox="0 0 48 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>underline</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="underline---f0cd" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-14.000000, 0.000000)" opacity="0.699999988">
+        <path d="M62,40.5041783 C62,54.3481894 51.8591549,64 37.9517103,64 C24.0442656,64 14,54.3481894 14,40.5041783 L14,0 L21.3400402,0 L21.3400402,39.9192201 C21.3400402,50.448468 27.9074447,57.3704735 37.9517103,57.3704735 C47.9959759,57.3704735 54.6599598,50.448468 54.6599598,39.9192201 L54.6599598,0 L62,0 L62,40.5041783 Z M14,70 L62,70 L62,76 L14,76 L14,70 Z" id="underline" fill="#000000"></path>
+    </g>
+</svg>

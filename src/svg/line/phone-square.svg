@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="76px" viewBox="0 0 76 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>phone-square</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="phone-square---f098" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0,0 L76,0 L76,76 L0,76 L0,0 Z M41.9609375,51.3046875 C34.7474,47.2651 28.7349,41.2539 24.6953125,34.0390625 L32.4140625,26.21875 L25.9140625,12 L12,12 C12,40.7209 35.2804,64 64,64 L64,50.0859375 L49.78125,43.5859375 L41.9609375,51.3046875 Z M6,6 L6,70 L70,70 L70,6 L6,6 Z" id="phone-square" fill="#000000" fill-rule="nonzero"></path>
+    </g>
+</svg>

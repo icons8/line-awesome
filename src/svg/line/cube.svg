@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="76px" viewBox="0 0 76 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>cube</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="cube---f1b2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0,17.7379493 L38,0 L76,17.7379493 L76,53.7751225 L38,76 L0,53.7751225 L0,17.7379493 Z M6,21.7225662 L38,36 L70,21.7225662 L38,7 L6,21.7225662 Z M6,50 L38,68.7209118 L70,50 L70,28 L38,43.2796133 L6,28 L6,50 Z" id="cube" fill="#000000"></path>
+    </g>
+</svg>

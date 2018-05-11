@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="64px" viewBox="0 0 12 64" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>ellipsis-v</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="ellipsis-v" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" transform="translate(-32.000000, -6.000000)">
+        <path d="M38,18 C34.6862915,18 32,15.3137085 32,12 C32,8.6862915 34.6862915,6 38,6 C41.3137085,6 44,8.6862915 44,12 C44,15.3137085 41.3137085,18 38,18 Z M38,44 C34.6862915,44 32,41.3137085 32,38 C32,34.6862915 34.6862915,32 38,32 C41.3137085,32 44,34.6862915 44,38 C44,41.3137085 41.3137085,44 38,44 Z M38,70 C34.6862915,70 32,67.3137085 32,64 C32,60.6862915 34.6862915,58 38,58 C41.3137085,58 44,60.6862915 44,64 C44,67.3137085 41.3137085,70 38,70 Z" fill="#000000"></path>
+    </g>
+</svg>

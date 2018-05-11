@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="76px" height="76px" viewBox="0 0 76 76" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.1 (47250) - http://www.bohemiancoding.com/sketch -->
+    <title>bank</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="bank-(alias)" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M0,70 L76,70 L76,76 L0,76 L0,70 Z M11,35 L11,60 L5,60 L5,35 L3,35 L3,29 L73,29 L73,35 L71,35 L71,60 L65,60 L65,35 L59,35 L59,60 L53,60 L53,35 L47,35 L47,60 L41,60 L41,35 L35,35 L35,60 L29,60 L29,35 L23,35 L23,60 L17,60 L17,35 L11,35 Z M76,27 L0,27 L0,20.06604 L38.0983685,0 L76,20.06604 L76,27 Z M38.0344515,6.77463575 L11.3702581,21 L64.6986449,21 L38.0344515,6.77463575 Z M3,62 L73,62 L73,68 L3,68 L3,62 Z M38.5,19 C36.5670034,19 35,17.4329966 35,15.5 C35,13.5670034 36.5670034,12 38.5,12 C40.4329966,12 42,13.5670034 42,15.5 C42,17.4329966 40.4329966,19 38.5,19 Z" id="bank" fill="#000000"></path>
+    </g>
+</svg>
