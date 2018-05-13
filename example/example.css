@@ -1,0 +1,143 @@
+
+html, body{
+	font: 16px/1.5 sans-serif;
+}
+
+
+header{
+	background: #32c24d;
+	color: #fff;
+	font-weight: 300;
+	text-align: center;
+	padding: 80px 0 40px;
+}
+
+header h1{
+	margin: 0 0 30px;
+}
+
+header h1 small{
+	color: #fff;
+	font-size: 40%;
+}
+
+
+header a{
+	color: #fff;
+	text-decoration: underline;
+}
+
+header a:hover, header a:active, header a:focus, header a:active:focus{
+	color: inherit;
+}
+
+
+
+
+#icons{
+	/* padding-bottom: 60px; */
+	/* min-width: 300px; */
+	/* margin: 0 auto; */
+}
+
+
+#icons > section{
+	/* padding-bottom: 50px; */
+}
+
+
+.page-header{
+	color: #666;
+	font-size: 1.6rem;
+}
+
+
+.fontawesome-icon-list{
+	padding-bottom: 70px;
+}
+
+
+.fa-hover a{
+	color: #999;
+	font-size: .8rem;
+	height: 62px;
+	padding: 10px;
+	display: block;
+}
+
+
+.fa-hover a:hover, .fa-hover a:active, .fa-hover a:focus, .fa-hover a:active:focus{
+	background: #32c24d;
+	color: #fff;
+	text-decoration: none;
+}
+
+
+.fa-hover a:hover .fa, .fa-hover a:active .fa, .fa-hover a:focus .fa, .fa-hover a:active:focus .fa{
+	color: #fff;
+}
+
+
+.fa-hover a:hover .text-muted, .fa-hover a:active .text-muted, .fa-hover a:focus .text-muted, .fa-hover a:active:focus .text-muted{
+	color: #fff;
+}
+
+
+.fa-hover .fa{
+	color: #999;
+	font-size: 38px;
+	vertical-align: middle;
+	margin-right: 12px;
+}
+
+
+.fa-hover .text-muted{
+	color: #ccc;
+	font-size: 80%;
+}
+
+
+.fa-hover span:not(.sr-only):not(.text-muted){
+	width: calc(100% - 60px);
+	display: inline-block;
+	line-height: 1.3;
+	vertical-align: middle;
+}
+
+
+.alert{
+	font-size: 0.8rem;
+	padding: 20px;
+	border-radius: 0;
+	color: #000;
+}
+
+.alert a{
+	color: inherit;
+}
+
+
+.alert.alert-warning{
+	background: rgb(255, 193, 7);
+	border-color: rgb(255, 193, 7);
+	
+}
+
+
+.alert.alert-success{
+	background: rgb(205, 220, 57);
+	border-color: rgb(205, 220, 57);
+}
+
+
+
+.page-footer{
+	font-size: 0.8rem;
+	text-align: center;
+	padding: 0 0 80px;
+}
+
+
+.page-footer a{
+	color: #32c24d;
+}
