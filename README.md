@@ -16,7 +16,7 @@ Line Awesome can be loaded via CDN or downloaded as zip archive. You can read mo
 Alternatively, Line Awesome can be installed as npm package:
 
 ```shell
-npm install icons8/line-awesome
+npm install line-awesome
 ```
 
 ## Usage
