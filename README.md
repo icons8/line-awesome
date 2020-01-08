@@ -26,6 +26,24 @@ Wherever you desire to place an icon simply insert the following code and change
 <i class="las la-battery-three-quarters"></i>
 ```
 
+You can change the size of the icons using one of the following classes:
+
+- la-lg
+- la-xs
+- la-sm
+- la-lx
+- la-1x
+- la-2x
+- la-3x
+- la-4x
+- la-5x
+- la-6x
+- la-7x
+- la-8x
+- la-9x
+- la-10x
+- la-fw
+
 You can find a usage example for each icon on the [Line Awesome page](https://icons8.com/line-awesome). Feel free to use this page to quickly find desired icons.
 
 
