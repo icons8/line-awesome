@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 .#{$la-css-prefix}-ul {
   padding-left: 0;
   margin-left: $la-li-width;
