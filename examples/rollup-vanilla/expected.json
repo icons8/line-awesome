@@ -1,0 +1,8 @@
+{
+  "dist/one.js": { "icons": ["las-star"], "maxGzip": 1024 },
+  "dist/ten.js": {
+    "icons": ["las-star", "lar-star", "lab-github", "las-heart", "las-home", "las-search", "las-user", "las-cog", "las-times", "las-bars"]
+  },
+  "dist/all.js": { "allIcons": true },
+  "dist/unplugin.js": { "iconify": ["heart-solid", "github"], "maxGzip": 1536 }
+}

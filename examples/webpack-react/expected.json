@@ -1,0 +1,20 @@
+{
+  "dist/*.js": {
+    "icons": [
+      "las-star",
+      "lab-github"
+    ],
+    "iconify": [
+      "heart-solid"
+    ]
+  },
+  "dist/*.css": {
+    "contains": [
+      ".la-bell:before",
+      "Line Awesome Free"
+    ]
+  },
+  "dist/*.woff2": {
+    "minFiles": 3
+  }
+}

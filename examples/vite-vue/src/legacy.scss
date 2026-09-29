@@ -1,0 +1,3 @@
+// v1 SCSS, resolved through the package's `sass` export condition. The font path is
+// set to a package path, so the bundler finds the fonts and copies them into the build.
+@use 'pkg:line-awesome' with ($la-font-path: 'line-awesome/dist/line-awesome/fonts');
