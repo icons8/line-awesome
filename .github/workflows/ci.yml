@@ -1,0 +1,79 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [master]
+
+permissions:
+  contents: read
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+      - name: Pack
+        run: |
+          npm pack --json > pack.json
+          node -e "const [p] = require('./pack.json'); console.log('### Tarball\n\n| | |\n|---|---|\n| file | ' + p.filename + ' |\n| packed | ' + (p.size / 1048576).toFixed(2) + ' MB |\n| unpacked | ' + (p.unpackedSize / 1048576).toFixed(2) + ' MB |\n| files | ' + p.entryCount + ' |')" >> "$GITHUB_STEP_SUMMARY"
+      - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: tarball
+          path: line-awesome-*.tgz
+
+  # The package installs with no network beyond what it already has, and no tokens.
+  clean-install:
+    needs: build-test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node: [22, 24]
+    steps:
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: tarball
+      - name: Install offline in a clean container
+        run: |
+          docker run --rm --network none -v "$PWD:/pkg:ro" node:${{ matrix.node }}-slim sh -ec '
+            mkdir /app && cd /app
+            echo "{\"name\":\"app\",\"private\":true,\"type\":\"module\"}" > package.json
+            npm install --offline --cache /tmp/empty-cache /pkg/line-awesome-*.tgz
+            node --input-type=module -e "
+              const { lasStar } = await import(\"line-awesome\");
+              const { toSvgString } = await import(\"line-awesome/core\");
+              if (!toSvgString(lasStar).startsWith(\"<svg\")) process.exit(1);
+            "
+            test -f node_modules/line-awesome/dist/line-awesome/css/line-awesome.min.css
+          '
+
+  examples:
+    needs: build-test
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        example: [nuxt, rollup-vanilla, vite-vue, webpack-react]
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+      - uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          name: tarball
+      - name: Install the packed tarball
+        working-directory: examples/${{ matrix.example }}
+        run: |
+          npm ci
+          npm install --no-save ../../line-awesome-*.tgz
+      - run: npm run build
+        working-directory: examples/${{ matrix.example }}
+      - name: Only the imported icons are bundled
+        run: node scripts/check-bundle.mjs examples/${{ matrix.example }}

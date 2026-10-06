@@ -1,4 +1,9 @@
 .idea
 .DS_Store
 /npm-debug.log
-/node_modules
+node_modules
+/lib
+*.tgz
+/examples/*/dist
+/examples/*/.nuxt
+/examples/*/.output
