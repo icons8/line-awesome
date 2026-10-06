@@ -16,7 +16,6 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - The package has an entry: `main` and `exports` point to the JavaScript module (1.3.0 had none). The CSS stays at `dist/line-awesome/css/` and is also exposed through the `style` and `sass` export conditions.
-- License: MIT, stated the same way in `LICENSE.md`, `package.json` and the README.
 
 ### Fixed
 
@@ -25,6 +24,7 @@ All notable changes to this project will be documented in this file.
 ### Unchanged
 
 - CSS, fonts, the Font Awesome compatibility stylesheet and `svg/` are byte-identical to 1.3.0 and stay at the same paths.
+- License: the same as in 1.3.0, MIT or the [Good Boy License](https://icons8.com/good-boy-license/) at your choice.
 
 ## 1.3.0 - 2019-11-21
 

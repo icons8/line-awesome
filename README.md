@@ -363,7 +363,7 @@ Bug reports and ideas are welcome in [issues](https://github.com/icons8/line-awe
 
 ## License
 
-Line Awesome is released under the [MIT License](LICENSE.md).
+Line Awesome is released under either the [MIT License](LICENSE.md) or the [Good Boy License](https://icons8.com/good-boy-license/), at your choice. See [LICENSE.md](LICENSE.md) for both texts.
 
 ## Beyond the font
 

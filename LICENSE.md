@@ -1,4 +1,8 @@
-# MIT License
+# License
+
+We’ve released the icon pack under either MIT or the [Good Boy License](https://icons8.com/good-boy-license/).
+
+## MIT License
 
 Copyright (c) Icons8
 
@@ -19,6 +23,22 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+## Good Boy License
+
+We invented it. Please do _whatever your mom would approve of:_
+
+### Permitted Use
+
+* Download in any format
+* Change
+* Fork
+
+### Prohibited Use
+
+* No tattoos
+* No touching with unwashed hands
+* No exchanging for drugs.
 
 ## Notices
 
