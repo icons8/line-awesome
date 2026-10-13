@@ -16,6 +16,7 @@ All notable changes to this project will be documented in this file.
 ### Changed
 
 - The package has an entry: `main` and `exports` point to the JavaScript module (1.3.0 had none). The CSS stays at `dist/line-awesome/css/` and is also exposed through the `style` and `sass` export conditions.
+- The package is ESM only: `require('line-awesome')` works on Node 20.19+; on Node 18 use `import`.
 
 ### Fixed
 
