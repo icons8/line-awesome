@@ -1,0 +1,15 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`react LaIcon > decorative icon is hidden from screen readers 1`] = `"<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="1em" height="1em" aria-hidden="true"><path fill="currentColor" d="m30.336 12.5469-10.172-1.0742L16 2.1328l-4.164 9.3399-10.172 1.0742 7.5977 6.8476-2.121 10.004L16 24.289l8.8594 5.1093-2.1211-10.0039Z"/></svg>"`;
+
+exports[`react LaIcon > multicolor icon keeps its colors 1`] = `"<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 24" width="2em" height="1em" aria-hidden="true"><path fill="#f44336" d="M0 0h48v12H0z"/><path fill="#2196f3" d="M0 12h48v12H0z"/></svg>"`;
+
+exports[`react LaIcon > title gives an accessible name and is escaped 1`] = `"<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="1em" height="1em" role="img" aria-label="Rate &lt;b&gt;&quot;5&quot;&lt;/b&gt;"><title>Rate &#60;b&#62;&#34;5&#34;&#60;/b&#62;</title><path fill="currentColor" d="m30.336 12.5469-10.172-1.0742L16 2.1328l-4.164 9.3399-10.172 1.0742 7.5977 6.8476-2.121 10.004L16 24.289l8.8594 5.1093-2.1211-10.0039Z"/></svg>"`;
+
+exports[`toSvgString renders a standalone svg 1`] = `"<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="m30.336 12.5469-10.172-1.0742L16 2.1328l-4.164 9.3399-10.172 1.0742 7.5977 6.8476-2.121 10.004L16 24.289l8.8594 5.1093-2.1211-10.0039Z"/></svg>"`;
+
+exports[`vue LaIcon > decorative icon is hidden from screen readers 1`] = `"<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="1em" height="1em" aria-hidden="true"><path fill="currentColor" d="m30.336 12.5469-10.172-1.0742L16 2.1328l-4.164 9.3399-10.172 1.0742 7.5977 6.8476-2.121 10.004L16 24.289l8.8594 5.1093-2.1211-10.0039Z"/></svg>"`;
+
+exports[`vue LaIcon > multicolor icon keeps its colors 1`] = `"<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 24" width="2em" height="1em" aria-hidden="true"><path fill="#f44336" d="M0 0h48v12H0z"/><path fill="#2196f3" d="M0 12h48v12H0z"/></svg>"`;
+
+exports[`vue LaIcon > title gives an accessible name and is escaped 1`] = `"<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="1em" height="1em" role="img" aria-label="Rate &lt;b&gt;&quot;5&quot;&lt;/b&gt;"><title>Rate &#60;b&#62;&#34;5&#34;&#60;/b&#62;</title><path fill="currentColor" d="m30.336 12.5469-10.172-1.0742L16 2.1328l-4.164 9.3399-10.172 1.0742 7.5977 6.8476-2.121 10.004L16 24.289l8.8594 5.1093-2.1211-10.0039Z"/></svg>"`;

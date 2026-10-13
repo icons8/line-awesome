@@ -1,19 +1,98 @@
 {
   "name": "line-awesome",
-  "version": "1.3.1",
-  "description": "Line Awesome by Icon8. A drop-in replacement for Font Awesome.",
+  "version": "2.0.0-rc.0",
+  "description": "Line Awesome by Icons8: 1,544 free line icons as a web font, as tree-shakeable SVG icons for Vue and React, and as components through unplugin-icons in Vite, webpack, Rollup and Nuxt.",
   "keywords": [
     "font",
     "awesome",
     "icons",
+    "svg",
     "icons8",
     "line-awesome",
-    "font-awesome"
+    "font-awesome",
+    "vue",
+    "react",
+    "tree-shaking",
+    "unplugin-icons",
+    "iconify"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/icons8/line-awesome.git"
+    "url": "git+https://github.com/icons8/line-awesome.git"
   },
   "license": "MIT",
-  "main": "dist/line-awesome/css/line-awesome.css"
+  "type": "module",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "style": "dist/line-awesome/css/line-awesome.min.css",
+  "jsdelivr": "dist/line-awesome/css/line-awesome.min.css",
+  "unpkg": "dist/line-awesome/css/line-awesome.min.css",
+  "sideEffects": [
+    "./dist/**",
+    "**/*.css",
+    "**/*.scss"
+  ],
+  "files": [
+    "dist",
+    "svg",
+    "lib",
+    "CHANGELOG.md"
+  ],
+  "exports": {
+    ".": {
+      "types": "./lib/index.d.ts",
+      "sass": "./dist/line-awesome/scss/line-awesome.scss",
+      "style": "./dist/line-awesome/css/line-awesome.min.css",
+      "default": "./lib/index.js"
+    },
+    "./icons/*": {
+      "types": "./lib/icons/*.d.ts",
+      "default": "./lib/icons/*.js"
+    },
+    "./core": {
+      "types": "./lib/core.d.ts",
+      "default": "./lib/core.js"
+    },
+    "./vue": {
+      "types": "./lib/vue/index.d.ts",
+      "default": "./lib/vue/index.js"
+    },
+    "./react": {
+      "types": "./lib/react/index.d.ts",
+      "default": "./lib/react/index.js"
+    },
+    "./icons.json": "./lib/icons.json",
+    "./metadata.json": "./lib/metadata.json",
+    "./package.json": "./package.json",
+    "./*": "./*"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "vitest run",
+    "check-bundle": "node scripts/check-bundle.mjs",
+    "test:watch": "vitest"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "vue": ">=3.3"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@iconify/types": "^2.0.0",
+    "@resvg/resvg-js": "^2.6.2",
+    "@types/react": "^19.3.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0",
+    "svgo": "^4.1.0",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.2",
+    "vue": "^3.5.43"
+  }
 }

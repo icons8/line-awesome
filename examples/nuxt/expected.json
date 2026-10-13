@@ -1,0 +1,6 @@
+{
+  ".output/public/_nuxt/*.js": { "icons": ["las-star"], "iconify": ["heart-solid", "github"] },
+  ".output/public/_nuxt/*.css": { "contains": [".la-bell:before", "Line Awesome Free"] },
+  ".output/public/_nuxt/*.woff2": { "minFiles": 3 },
+  ".output/server/chunks/build/*.mjs": { "icons": ["las-star"], "iconify": ["heart-solid", "github"] }
+}

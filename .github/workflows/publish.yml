@@ -1,0 +1,47 @@
+# Publishes to npm with Trusted Publishing (OIDC): no npm token is stored anywhere.
+# Run manually from the Actions tab. dry_run defaults to true and only shows what would ship.
+name: Publish
+
+on:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Show what would be published without publishing
+        type: boolean
+        default: true
+      dist_tag:
+        description: npm dist-tag (next leaves unversioned CDN URLs on the current latest)
+        type: choice
+        options: [next, latest]
+        default: next
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: npm-publish
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+        with:
+          node-version-file: .nvmrc
+          registry-url: https://registry.npmjs.org
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+      - name: Version is not on npm yet
+        run: |
+          version=$(node -p "require('./package.json').version")
+          if npm view "line-awesome@$version" version 2>/dev/null | grep -q .; then
+            echo "line-awesome@$version is already published" >&2
+            exit 1
+          fi
+      - name: Preview the tarball
+        run: npm pack --dry-run
+      - name: Publish
+        run: npm publish --provenance --tag "${{ inputs.dist_tag }}" ${{ inputs.dry_run && '--dry-run' || '' }}
