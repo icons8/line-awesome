@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="170" viewBox="0 0 1200 170" role="img" aria-label="Line Awesome in numbers"><defs></defs><rect x="0" y="0" width="288" height="170" rx="22" fill="#fff" stroke="#ececec"/>
+  <text x="28" y="76" font-family="Inter, 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="46" font-weight="700" letter-spacing="-1.5" fill="#1a1a1a">1,544</text>
+  <text x="28" y="116" font-family="Inter, 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="16" fill="#666">SVG icons,</text>
+  <text x="28" y="138" font-family="Inter, 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="16" fill="#666">1,393 distinct names</text>
+  <rect x="304" y="0" width="288" height="170" rx="22" fill="#fff" stroke="#ececec"/>
+  <text x="332" y="76" font-family="Inter, 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="46" font-weight="700" letter-spacing="-1.5" fill="#1a66f0">3 styles</text>
+  <text x="332" y="116" font-family="Inter, 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="16" fill="#666">solid 960, regular 151,</text>
+  <text x="332" y="138" font-family="Inter, 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="16" fill="#666">brands 433</text>
+  <rect x="608" y="0" width="288" height="170" rx="22" fill="#fff" stroke="#ececec"/>
+  <text x="636" y="76" font-family="Inter, 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="46" font-weight="700" letter-spacing="-1.5" fill="#1a1a1a">616 B</text>
+  <text x="636" y="116" font-family="Inter, 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="16" fill="#666">gzip for the first icon,</text>
+  <text x="636" y="138" font-family="Inter, 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="16" fill="#666">about 200 B for each next</text>
+  <rect x="912" y="0" width="288" height="170" rx="22" fill="#fff" stroke="#ececec"/>
+  <text x="940" y="76" font-family="Inter, 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="46" font-weight="700" letter-spacing="-1.5" fill="#1a66f0">16 KB</text>
+  <text x="940" y="116" font-family="Inter, 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="16" fill="#666">gzip for the font CSS;</text>
+  <text x="940" y="138" font-family="Inter, 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="16" fill="#666">fonts load per style</text></svg>

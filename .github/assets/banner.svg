@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="520" viewBox="0 0 1200 520" role="img" aria-label="Line Awesome: line icons for your code"><defs><linearGradient id="hero" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#1a66f0"/><stop offset="0.45" stop-color="#4a9bff"/>
+      <stop offset="0.8" stop-color="#b9b4f6"/><stop offset="1" stop-color="#e2b9ec"/>
+    </linearGradient></defs>
+  <rect x="0.5" y="0.5" width="1199" height="519" rx="28" fill="#f7f7f7" stroke="#e8e8e8"/>
+  <rect x="64" y="64" width="322" height="38" rx="10" fill="#fff" stroke="#ececec"/>
+  <rect x="71" y="71" width="46" height="24" rx="7" fill="#f0f0f0"/>
+  <text x="94" y="88" font-family="Inter, 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="14" font-weight="600" fill="#333" text-anchor="middle">New</text>
+  <text x="128" y="88" font-family="Inter, 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="15" fill="#222">Line Awesome 2 · tree-shakable</text>
+  <text x="64" y="206" font-family="Inter, 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="64" font-weight="700" letter-spacing="-2" fill="#1a1a1a">Line icons</text>
+  <text x="64" y="274" font-family="Inter, 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="64" font-weight="700" letter-spacing="-2" fill="#1a1a1a">for your code</text>
+  <text x="64" y="330" font-family="Inter, 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="21" fill="#666">1,544 free icons for Vue, React and plain CSS.</text>
+  <text x="64" y="361" font-family="Inter, 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="21" fill="#666">Import only the icons you use.</text>
+  <rect x="64" y="410" width="330" height="54" rx="14" fill="#262626"/>
+  <text x="90" y="444" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="19" fill="#8a8a8a">$</text>
+  <text x="112" y="444" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="19" fill="#7aa2ff">npm</text>
+  <text x="159" y="444" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="19" fill="#f2f2f2">i line-awesome</text>
+  <rect x="640" y="64" width="496" height="392" rx="26" fill="url(#hero)"/>
+  <rect x="672" y="92" width="130" height="30" rx="8" fill="#fff" fill-opacity="0.22"/>
+  <text x="737" y="113" font-family="'SFMono-Regular', Menlo, Consolas, monospace" font-size="15" fill="#fff" text-anchor="middle">lab la-github</text>
+  <g transform="translate(794 130) scale(6)"><path fill="#fff" fill-rule="evenodd" d="M16 4C9.371 4 4 9.371 4 16c0 5.3008 3.4375 9.8008 8.207 11.3867.6016.1094.8203-.2578.8203-.5781 0-.2852-.0117-1.039-.0156-2.039-3.3398.7226-4.043-1.6094-4.043-1.6094-.5468-1.3868-1.332-1.7579-1.332-1.7579-1.0898-.7421.082-.7265.082-.7265 1.2032.086 1.836 1.2344 1.836 1.2344 1.0703 1.8359 2.8086 1.3046 3.4922 1 .1093-.7774.4218-1.3047.7617-1.6055-2.664-.3008-5.4648-1.332-5.4648-5.9297 0-1.3125.4687-2.3828 1.2343-3.2227-.121-.3007-.5351-1.5234.1172-3.1757 0 0 1.0078-.3203 3.3008 1.2304.957-.2656 1.9844-.3984 3.0039-.4023 1.0195.0039 2.0469.1367 3.004.4023 2.2929-1.5508 3.2968-1.2304 3.2968-1.2304.6562 1.6523.246 2.875.121 3.1757.7696.8399 1.2305 1.9102 1.2305 3.2227 0 4.6094-2.8046 5.621-5.4765 5.9219.4297.3672.8125 1.1015.8125 2.2187 0 1.6055-.0117 2.8985-.0117 3.293 0 .3203.2148.6953.8242.5781C24.5664 25.797 28 21.3007 28 16c0-6.629-5.371-12-12-12"/></g>
+  <text x="672" y="428" font-family="Inter, 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="64" font-weight="700" letter-spacing="-2" fill="#fff">1,544</text>
+  <text x="866" y="426" font-family="Inter, 'Segoe UI', -apple-system, Helvetica, Arial, sans-serif" font-size="21" fill="#fff" fill-opacity="0.8">free icons</text></svg>
