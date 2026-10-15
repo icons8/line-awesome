@@ -340,7 +340,7 @@ Nothing changes for the font: the same CSS and font files at the same paths, the
 
 **Font Awesome 4 names** from the font's compatibility section (`la la-close`, `la la-star-o`) are exported too, marked deprecated: `lasClose` points to `lasTimes`, `larStarO` to `larStar`.
 
-**The JavaScript is ESM only.** Node 20.19+ and all current bundlers load it. Jest with babel-jest needs to be told to transform the package:
+**The JavaScript is ESM only.** Node 20.19+ and all current bundlers load it. `require('line-awesome')` works on Node 20.19+; on Node 18 use `import` instead. Jest with babel-jest needs to be told to transform the package:
 
 ```js
 // jest.config.js
