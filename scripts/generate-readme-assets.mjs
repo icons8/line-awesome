@@ -46,7 +46,7 @@ function banner() {
   <text x="128" y="88" font-family="${FONT}" font-size="15" fill="#222">Line Awesome 2 · tree-shakable</text>
   <text x="64" y="206" font-family="${FONT}" font-size="64" font-weight="700" letter-spacing="-2" fill="#1a1a1a">Line icons</text>
   <text x="64" y="274" font-family="${FONT}" font-size="64" font-weight="700" letter-spacing="-2" fill="#1a1a1a">for your code</text>
-  <text x="64" y="330" font-family="${FONT}" font-size="21" fill="#666">1,544 free icons for Vue, React and plain CSS.</text>
+  <text x="64" y="330" font-family="${FONT}" font-size="21" fill="#666">1,500+ free icons for Vue, React and plain CSS.</text>
   <text x="64" y="361" font-family="${FONT}" font-size="21" fill="#666">Import only the icons you use.</text>
   <rect x="64" y="410" width="330" height="54" rx="14" fill="#262626"/>
   <text x="90" y="444" font-family="${MONO}" font-size="19" fill="#8a8a8a">$</text>
@@ -56,8 +56,8 @@ function banner() {
   <rect x="672" y="92" width="130" height="30" rx="8" fill="#fff" fill-opacity="0.22"/>
   <text x="737" y="113" font-family="${MONO}" font-size="15" fill="#fff" text-anchor="middle">lab la-github</text>
   ${icon('lab-github', 794, 130, 192, '#fff')}
-  <text x="672" y="428" font-family="${FONT}" font-size="64" font-weight="700" letter-spacing="-2" fill="#fff">1,544</text>
-  <text x="866" y="426" font-family="${FONT}" font-size="21" fill="#fff" fill-opacity="0.8">free icons</text>`;
+  <text x="672" y="428" font-family="${FONT}" font-size="64" font-weight="700" letter-spacing="-2" fill="#fff">1,500+</text>
+  <text x="888" y="426" font-family="${FONT}" font-size="21" fill="#fff" fill-opacity="0.8">free icons</text>`;
   return svg(1200, 520, 'Line Awesome: line icons for your code', content, defs);
 }
 
@@ -104,8 +104,8 @@ function facts() {
   const gap = 16;
   const w = (1200 - 3 * gap) / 4;
   const tiles = [
-    ['1,544', ['SVG icons,', '1,393 distinct names'], '#1a1a1a'],
-    ['3 styles', ['solid 960, regular 151,', 'brands 433'], '#1a66f0'],
+    ['1,500+', ['icons, as SVG', 'and as a font'], '#1a1a1a'],
+    ['3 styles', ['solid, regular', 'and brands'], '#1a66f0'],
     ['616 B', ['gzip for the first icon,', 'about 200 B for each next'], '#1a1a1a'],
     ['16 KB', ['gzip for the font CSS;', 'fonts load per style'], '#1a66f0']
   ];

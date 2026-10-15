@@ -31,12 +31,12 @@
 
 # Icons8 Line Awesome
 
-Line Awesome is a free set of 1,544 line icons from [Icons8](https://icons8.com): 1,393 names in regular, solid and brand styles. It is based on the [Icons8 Windows 10 style](https://icons8.com/icons/windows), and its class names follow Font Awesome 5, so it works as a drop-in replacement for it.
+Line Awesome is a free set of more than 1,500 line icons from [Icons8](https://icons8.com) in regular, solid and brand styles. It is based on the [Icons8 Windows 10 style](https://icons8.com/icons/windows), and its class names follow Font Awesome 5, so it works as a drop-in replacement for it.
 
 Use it as a web font with CSS classes, import icons one by one as SVG for Vue, React or plain JavaScript, or get them as components through [unplugin-icons](#bundler-plugins) in Vite, webpack, Rollup and Nuxt.
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/icons8/line-awesome/master/.github/assets/facts.svg" alt="1,544 icons in 3 styles: 616 B for the first imported icon, 16 KB of CSS for the font" width="100%">
+  <img src="https://raw.githubusercontent.com/icons8/line-awesome/master/.github/assets/facts.svg" alt="More than 1,500 icons in 3 styles: 616 B for the first imported icon, 16 KB of CSS for the font" width="100%">
 </p>
 
 <p align="center">
