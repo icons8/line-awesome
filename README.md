@@ -1,13 +1,74 @@
+<p align="center">
+  <a href="https://icons8.com/line-awesome"><img src="https://raw.githubusercontent.com/icons8/line-awesome/master/.github/assets/banner.svg" alt="Line Awesome: line icons for your code" width="100%"></a>
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/line-awesome"><img src="https://img.shields.io/npm/v/line-awesome?style=flat-square&color=1a66f0" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/line-awesome"><img src="https://img.shields.io/npm/dm/line-awesome?style=flat-square&color=1a1a1a" alt="npm downloads per month"></a>
+  <a href="https://github.com/icons8/line-awesome/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/icons8/line-awesome/ci.yml?branch=master&style=flat-square&label=CI" alt="CI status"></a>
+  <a href="#svg-icons"><img src="https://img.shields.io/npm/types/line-awesome?style=flat-square&color=3178c6" alt="TypeScript types included"></a>
+  <a href="LICENSE.md"><img src="https://img.shields.io/badge/license-MIT%20or%20Good%20Boy-1a1a1a?style=flat-square" alt="License: MIT or Good Boy"></a>
+</p>
+
+<p align="center">
+  <a href="#vue"><img src="https://img.shields.io/badge/Vue-3-4FC08D?style=flat-square&logo=vuedotjs&logoColor=white" alt="Vue 3"></a>
+  <a href="#react"><img src="https://img.shields.io/badge/React-18%2B-149ECA?style=flat-square&logo=react&logoColor=white" alt="React 18+"></a>
+  <a href="#bundler-plugins"><img src="https://img.shields.io/badge/Vite%20·%20webpack%20·%20Rollup%20·%20Nuxt-unplugin--icons-1a66f0?style=flat-square" alt="unplugin-icons for Vite, webpack, Rollup and Nuxt"></a>
+  <a href="#the-font"><img src="https://img.shields.io/badge/CSS-web%20font-1a1a1a?style=flat-square&logo=css3&logoColor=white" alt="CSS web font"></a>
+</p>
+
+<p align="center">
+  <a href="https://icons8.com/line-awesome"><b>Browse icons</b></a>
+  ·
+  <a href="#quick-start">Quick start</a>
+  ·
+  <a href="#svg-icons">SVG icons</a>
+  ·
+  <a href="#upgrading-from-1x">Upgrading from 1.x</a>
+  ·
+  <a href="CHANGELOG.md">Changelog</a>
+</p>
+
 # Icons8 Line Awesome
-Line Awesome is a free set of 1,544 line icons from [Icons8](https://icons8.com): 1,393 names in regular, solid and brand styles.
+
+Line Awesome is a free set of more than 1,500 line icons from [Icons8](https://icons8.com) in regular, solid and brand styles. It is based on the [Icons8 Windows 10 style](https://icons8.com/icons/windows), and its class names follow Font Awesome 5, so it works as a drop-in replacement for it.
+
 Use it as a web font with CSS classes, import icons one by one as SVG for Vue, React or plain JavaScript, or get them as components through [unplugin-icons](#bundler-plugins) in Vite, webpack, Rollup and Nuxt.
 
-This icon-font is based off of the [Icons8 Windows 10 style](https://icons8.com/icons/windows), 
-which consists of over 9,000 icons, so be sure to check that out if you need more specific icons.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/icons8/line-awesome/master/.github/assets/facts.svg" alt="More than 1,500 icons in 3 styles: 616 B for the first imported icon, 16 KB of CSS for the font" width="100%">
+</p>
 
-Check out a [live preview](https://icons8.com/line-awesome) of the Line Awesome.
+<p align="center">
+  <a href="https://icons8.com/line-awesome"><img src="https://raw.githubusercontent.com/icons8/line-awesome/master/.github/assets/icons.svg" alt="A grid of Line Awesome icons in solid, regular and brand styles" width="100%"></a>
+</p>
 
-![A grid of Line Awesome icons](https://i.imgur.com/NwWeIMO.png)
+## Quick start
+
+```shell
+npm install line-awesome
+```
+
+**Web font.** Import the CSS once, then put classes on an element: `las` for solid, `lar` for regular, `lab` for brands.
+
+```js
+import 'line-awesome/dist/line-awesome/css/line-awesome.min.css';
+```
+
+```html
+<i class="las la-star"></i>
+```
+
+**SVG, tree-shakeable.** Import an icon by name; icons you don't import stay out of the bundle.
+
+```jsx
+import { lasStar } from 'line-awesome';
+import { LaIcon } from 'line-awesome/react'; // or 'line-awesome/vue'
+
+export const Favorite = () => <LaIcon icon={lasStar} size={24} title="Favorite" />;
+```
+
+No bundler? Load the CSS [from a CDN](#cdn).
 
 ## Choose how to use it
 
@@ -88,9 +149,7 @@ An icon has one of three styles, each with its class: `las` for solid, `lar` for
 
 Size classes: `la-xs`, `la-sm`, `la-lg`, `la-1x` to `la-10x`, and `la-fw` for fixed width.
 
-Find an icon and its classes on the [Line Awesome page](https://icons8.com/line-awesome).
-
-![The Line Awesome page with an icon's class names](https://i.imgur.com/kVi2xSH.png)
+Search icons and copy their classes on the [Line Awesome page](https://icons8.com/line-awesome).
 
 ### Replacing Font Awesome
 
@@ -352,10 +411,8 @@ export default {
 **Vue and React are optional peer dependencies.** Install the one whose `LaIcon` you import; the font and `line-awesome/core` need neither.
 
 ## Using in Figma, Sketch, Photoshop, etc.
-To use Line Awesome in your favorite design tool just import desired fonts to your project and you are ready to go!
-Note: there are 3 files, one for each style (regular, solid, brands). If you want to use all icons please import all 3 files.
 
-The font files are in `dist/line-awesome/fonts/` (`.ttf` for design tools), and every icon is also a separate file in `svg/`.
+To use Line Awesome in a design tool, install the font files. There are three, one per style (regular, solid, brands); install all three to get every icon. The files are in `dist/line-awesome/fonts/` (`.ttf` for design tools), and every icon is also a separate file in `svg/`.
 
 ## Contributing
 
@@ -367,16 +424,14 @@ Line Awesome is released under either the [MIT License](LICENSE.md) or the [Good
 
 ## Beyond the font
 
-Line Awesome is a free slice of [Icons8](https://icons8.com). For the full picture:
+Line Awesome is a free slice of [Icons8](https://icons8.com). For more:
 
-- **[Line Awesome](https://icons8.com/line-awesome)** — browse and search all 1,544 icons in the font
-- **[1.5M+ icons](https://icons8.com/icons)** — 132 styles, including the [Windows 10 set](https://icons8.com/icons/windows) this font is built from
-- **[Illustrations](https://icons8.com/illustrations)** — when line icons aren't enough: 108,000+ illustrations in 338 styles, flat to 3D
+- **[Line Awesome](https://icons8.com/line-awesome)**: browse and search all the icons in the font
+- **[Icons](https://icons8.com/icons)**: many more styles, including the [Windows 10 set](https://icons8.com/icons/windows) this font is built from
+- **[Illustrations](https://icons8.com/illustrations)**: when line icons aren't enough, illustrations from flat to 3D
 
 ## Credits
 
-Based on the [Windows 10 icon pack](https://icons8.com/download-huge-windows8-set/). The original ones contains 4,500 icons and is too heavy for a single font.
+Based on the [Icons8 Windows 10 icon pack](https://icons8.com/download-huge-windows8-set/); the original set is larger than a single font can reasonably carry, so Line Awesome ships a selection.
 
-## Questions or Ideas?
-
-If you have any questions or ideas about icons, [please feel free to contact us](https://github.com/icons8/line-awesome/issues).
+Questions or ideas about the icons? [Open an issue](https://github.com/icons8/line-awesome/issues).
