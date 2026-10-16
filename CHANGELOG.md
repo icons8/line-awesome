@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## 2.0.1
+
+### Changed
+
+- README and package description redesigned: new header, badges and illustrations, "more than 1,500 free line icons" instead of an exact count. No code changes: the package contents are the same as in 2.0.0.
+
 ## 2.0.0
 
 ### Added
