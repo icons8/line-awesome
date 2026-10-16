@@ -1,6 +1,6 @@
 {
   "name": "line-awesome",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Line Awesome by Icons8: more than 1,500 free line icons as a web font, as tree-shakeable SVG icons for Vue and React, and as components through unplugin-icons in Vite, webpack, Rollup and Nuxt.",
   "keywords": [
     "font",
