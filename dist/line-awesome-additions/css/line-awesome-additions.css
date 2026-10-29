@@ -15,7 +15,9 @@
 .la-rat:before,
 .la-lipstick:before,
 .la-nail-polish:before,
-.la-perfume:before {
+.la-perfume:before,
+.la-google-scholar:before,
+.la-jira-service-desk:before {
   font-family: 'Line Awesome Additions';
   font-weight: 400;
   font-synthesis: none; }
@@ -46,3 +48,9 @@
 
 .la-perfume:before {
   content: "\e905"; }
+
+.la-google-scholar:before {
+  content: "\e63b"; }
+
+.la-jira-service-desk:before {
+  content: "\e906"; }

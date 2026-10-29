@@ -1,11 +1,46 @@
 {
-  "x-twitter": { "style": "brands", "codepoint": "e61b" },
-  "tiktok": { "style": "brands", "codepoint": "e07b" },
-  "trailer": { "style": "solid", "codepoint": "e041" },
-  "repeat-one": { "style": "solid", "codepoint": "e900" },
-  "sparkles": { "style": "solid", "codepoint": "e901" },
-  "rat": { "style": "solid", "codepoint": "e902" },
-  "lipstick": { "style": "solid", "codepoint": "e903" },
-  "nail-polish": { "style": "solid", "codepoint": "e904" },
-  "perfume": { "style": "solid", "codepoint": "e905" }
+  "x-twitter": {
+    "style": "brands",
+    "codepoint": "e61b"
+  },
+  "tiktok": {
+    "style": "brands",
+    "codepoint": "e07b"
+  },
+  "trailer": {
+    "style": "solid",
+    "codepoint": "e041"
+  },
+  "repeat-one": {
+    "style": "solid",
+    "codepoint": "e900"
+  },
+  "sparkles": {
+    "style": "solid",
+    "codepoint": "e901"
+  },
+  "rat": {
+    "style": "solid",
+    "codepoint": "e902"
+  },
+  "lipstick": {
+    "style": "solid",
+    "codepoint": "e903"
+  },
+  "nail-polish": {
+    "style": "solid",
+    "codepoint": "e904"
+  },
+  "perfume": {
+    "style": "solid",
+    "codepoint": "e905"
+  },
+  "google-scholar": {
+    "style": "brands",
+    "codepoint": "e63b"
+  },
+  "jira-service-desk": {
+    "style": "brands",
+    "codepoint": "e906"
+  }
 }
