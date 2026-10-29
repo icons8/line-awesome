@@ -68,6 +68,7 @@
   },
   "scripts": {
     "build": "node scripts/build.mjs",
+    "build:font": "node scripts/build-font.mjs",
     "test": "vitest run",
     "check-bundle": "node scripts/check-bundle.mjs",
     "test:watch": "vitest"
@@ -90,9 +91,13 @@
     "@types/react": "^19.3.0",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
+    "svg2ttf": "^6.1.0",
+    "svgicons2svgfont": "^16.0.0",
     "svgo": "^4.1.0",
+    "ttf2woff": "^3.0.0",
     "typescript": "^7.0.2",
     "vitest": "^5.0.2",
-    "vue": "^3.5.43"
+    "vue": "^3.5.43",
+    "wawoff2": "^2.0.1"
   }
 }

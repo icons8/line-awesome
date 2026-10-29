@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## Unreleased
+
+### Added
+
+- 11 icons requested on GitHub: `la-x-twitter` (#95, #105, #108, #112), `la-tiktok` (#94), `la-google-scholar` (#109), `la-jira-service-desk` (#65), `la-sparkles` for AI (#104), `la-repeat-one` (#110), `la-trailer` (#106), `la-rat` (#70), `la-lipstick`, `la-nail-polish` and `la-perfume` (#66). The Twitter bird stays as it was.
+- They ship as SVG modules (`labXTwitter`, `lasSparkles`, …), in `icons.json`, and as a font with its own stylesheet, `dist/line-awesome-additions/css/line-awesome-additions.min.css`. The 1.3.0 font and CSS are unchanged.
+- `npm run build:font` builds that font and CSS from `svg/` and `added-icons.json`.
+
 ## 2.0.1
 
 ### Changed
