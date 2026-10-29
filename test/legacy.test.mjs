@@ -1,5 +1,5 @@
 // v1 consumers load CSS and fonts from unversioned CDN URLs, which will serve 2.0.0.
-// These files must stay byte-identical to line-awesome@1.3.0.
+// These files must stay byte-identical to line-awesome@1.3.0; icons added later only add files.
 import { expect, test } from 'vitest';
 import { fileURLToPath } from 'node:url';
 import { compareLegacy } from '../scripts/legacy-hashes.mjs';

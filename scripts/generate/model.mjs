@@ -4,6 +4,7 @@ import { join } from 'node:path';
 import { parseCss } from './parse-css.mjs';
 import { parseFonts } from './parse-fonts.mjs';
 import { toIconData } from './optimize.mjs';
+import { readAdditions } from '../additions.mjs';
 
 export const PREFIX = { solid: 'las', regular: 'lar', brands: 'lab' };
 
@@ -22,7 +23,7 @@ export function buildModel(root) {
   const used = new Set();
   const skipped = [];
 
-  const icons = []; // { id, exportName, base, style, codepoint, file, data, sameAs? }
+  const icons = []; // { id, exportName, base, style, codepoint, file, data, sameAs?, added? }
   const byStyleCodepoint = new Map();
 
   for (const [base, codepoint] of classes) {
@@ -49,6 +50,20 @@ export function buildModel(root) {
       icons.push(icon);
       byStyleCodepoint.set(`${style}:${codepoint}`, icon);
     }
+  }
+
+  // Icons added after 1.3.0 take their style and codepoint from added-icons.json, not the v1 fonts.
+  for (const { base, style, codepoint, file } of readAdditions(root)) {
+    if (classes.has(base)) throw new Error(`added-icons.json: ${base} is already a 1.3.0 class`);
+    if (byStyleCodepoint.has(`${style}:${codepoint}`)) throw new Error(`added-icons.json: ${base} reuses ${style} \\${codepoint}`);
+    if (!svgFiles.has(file)) throw new Error(`${base} (${style}): missing svg/${file}`);
+    if (used.has(file)) throw new Error(`svg/${file} is used twice`);
+    used.add(file);
+    const id = `${PREFIX[style]}-${base}`;
+    const icon = { id, exportName: exportName(style, base), base, style, codepoint, file, added: true };
+    icon.data = toIconData(id, readFileSync(join(root, 'svg', file), 'utf8'));
+    icons.push(icon);
+    byStyleCodepoint.set(`${style}:${codepoint}`, icon);
   }
 
   const unused = [...svgFiles].filter((file) => !used.has(file));

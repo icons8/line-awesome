@@ -151,6 +151,23 @@ Size classes: `la-xs`, `la-sm`, `la-lg`, `la-1x` to `la-10x`, and `la-fw` for fi
 
 Search icons and copy their classes on the [Line Awesome page](https://icons8.com/line-awesome).
 
+### Icons added after 1.3.0
+
+The 1.3.0 font stays as it is, so sites that load it keep their icons byte for byte. Newer icons (`la-x-twitter`, `la-tiktok`, `la-sparkles` and others, listed in [`added-icons.json`](added-icons.json)) come in a second font with its own stylesheet. Load it after the main one:
+
+```html
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/line-awesome@2/dist/line-awesome-additions/css/line-awesome-additions.min.css"
+/>
+```
+
+```js
+import 'line-awesome/dist/line-awesome-additions/css/line-awesome-additions.min.css';
+```
+
+The classes work as usual: `<i class="lab la-x-twitter"></i>`. As SVG icons they need nothing extra: `labXTwitter` is exported like any other icon.
+
 ### Replacing Font Awesome
 
 If your markup already uses Font Awesome 5 classes (`fas fa-star`, `fab fa-github`), swap the Font Awesome stylesheet for this one and keep the markup:

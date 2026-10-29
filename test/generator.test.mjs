@@ -1,16 +1,19 @@
 import { expect, test } from 'vitest';
 import { fileURLToPath } from 'node:url';
 import { buildModel } from '../scripts/generate/model.mjs';
+import { readAdditions } from '../scripts/additions.mjs';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
 const model = buildModel(root);
+const additions = readAdditions(root);
+const added = (style) => additions.filter((icon) => icon.style === style).length;
 
 test('every svg file becomes exactly one icon, styles taken from the fonts', () => {
   const count = (style) => model.icons.filter((icon) => icon.style === style).length;
-  expect(model.icons).toHaveLength(1544);
-  expect(count('solid')).toBe(960);
-  expect(count('regular')).toBe(151);
-  expect(count('brands')).toBe(433);
+  expect(model.icons).toHaveLength(1544 + additions.length);
+  expect(count('solid')).toBe(960 + added('solid'));
+  expect(count('regular')).toBe(151 + added('regular'));
+  expect(count('brands')).toBe(433 + added('brands'));
   expect(model.skipped).toEqual(['font-awesome-logo-full: no glyph in any font']);
 });
 
@@ -63,4 +66,15 @@ test('monochrome bodies are painted only with currentColor', () => {
 test('fill-rule survives optimization', () => {
   const github = model.icons.find((icon) => icon.id === 'lab-github');
   expect(github.data.body).toMatch(/fill-rule="evenodd"/);
+});
+
+test('icons from added-icons.json join the set with their manifest style; 1.3.0 icons stay as they were', () => {
+  const byId = new Map(model.icons.map((icon) => [icon.id, icon]));
+  for (const { base, style, codepoint } of additions) {
+    const prefix = { solid: 'las', regular: 'lar', brands: 'lab' }[style];
+    expect(byId.get(`${prefix}-${base}`), base).toMatchObject({ style, codepoint, added: true });
+  }
+  expect(byId.get('lab-x-twitter').exportName).toBe('labXTwitter');
+  expect(byId.get('lab-twitter')).toMatchObject({ codepoint: 'f099' });
+  expect(byId.get('lab-twitter').added).toBeUndefined();
 });
