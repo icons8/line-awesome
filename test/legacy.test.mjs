@@ -25,3 +25,10 @@ test('every @font-face in the CSS uses font-display: block (#72)', () => {
     expect(css, file).not.toMatch(/font-display: ?auto/);
   }
 });
+
+test('$la-version in SCSS is the package version without a prerelease suffix', () => {
+  const root = fileURLToPath(new URL('..', import.meta.url));
+  const { version } = JSON.parse(readFileSync(join(root, 'package.json'), 'utf8'));
+  const scss = readFileSync(join(root, 'dist/line-awesome/scss/_variables.scss'), 'utf8');
+  expect(scss).toContain(`$la-version: ${version.replace(/-.*/, '')} !default;`);
+});
