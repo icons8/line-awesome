@@ -1,33 +1,33 @@
-.la-pull-left {
+.#{$la-css-prefix}-pull-left {
   float: left;
 }
 
-.la-pull-right {
+.#{$la-css-prefix}-pull-right {
   float: right;
 }
 
-.la.la-pull-left,
-.las.la-pull-left,
-.lar.la-pull-left,
-.lal.la-pull-left,
-.lab.la-pull-left {
+.#{$la-css-prefix}.#{$la-css-prefix}-pull-left,
+.#{$la-css-prefix-las}.#{$la-css-prefix}-pull-left,
+.#{$la-css-prefix-lar}.#{$la-css-prefix}-pull-left,
+.lal.#{$la-css-prefix}-pull-left,
+.#{$la-css-prefix-lab}.#{$la-css-prefix}-pull-left {
   margin-right: .3em;
 }
 
-.la.la-pull-right,
-.las.la-pull-right,
-.lar.la-pull-right,
-.lal.la-pull-right,
-.lab.la-pull-right {
+.#{$la-css-prefix}.#{$la-css-prefix}-pull-right,
+.#{$la-css-prefix-las}.#{$la-css-prefix}-pull-right,
+.#{$la-css-prefix-lar}.#{$la-css-prefix}-pull-right,
+.lal.#{$la-css-prefix}-pull-right,
+.#{$la-css-prefix-lab}.#{$la-css-prefix}-pull-right {
   margin-left: .3em;
 }
 
-.la-spin {
+.#{$la-css-prefix}-spin {
   -webkit-animation: la-spin 2s infinite linear;
   animation: la-spin 2s infinite linear;
 }
 
-.la-pulse {
+.#{$la-css-prefix}-pulse {
   -webkit-animation: la-spin 1s infinite steps(8);
   animation: la-spin 1s infinite steps(8);
 }
@@ -54,48 +54,48 @@
   }
 }
 
-.la-rotate-90 {
+.#{$la-css-prefix}-rotate-90 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
   -webkit-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 
-.la-rotate-180 {
+.#{$la-css-prefix}-rotate-180 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
   -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 
-.la-rotate-270 {
+.#{$la-css-prefix}-rotate-270 {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
   -webkit-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 
-.la-flip-horizontal {
+.#{$la-css-prefix}-flip-horizontal {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
   -webkit-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
 
-.la-flip-vertical {
+.#{$la-css-prefix}-flip-vertical {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
   -webkit-transform: scale(1, -1);
   transform: scale(1, -1);
 }
 
-.la-flip-both, .la-flip-horizontal.la-flip-vertical {
+.#{$la-css-prefix}-flip-both, .#{$la-css-prefix}-flip-horizontal.#{$la-css-prefix}-flip-vertical {
   -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
   -webkit-transform: scale(-1, -1);
   transform: scale(-1, -1);
 }
 
-:root .la-rotate-90,
-:root .la-rotate-180,
-:root .la-rotate-270,
-:root .la-flip-horizontal,
-:root .la-flip-vertical,
-:root .la-flip-both {
+:root .#{$la-css-prefix}-rotate-90,
+:root .#{$la-css-prefix}-rotate-180,
+:root .#{$la-css-prefix}-rotate-270,
+:root .#{$la-css-prefix}-flip-horizontal,
+:root .#{$la-css-prefix}-flip-vertical,
+:root .#{$la-css-prefix}-flip-both {
   -webkit-filter: none;
   filter: none;
 }
