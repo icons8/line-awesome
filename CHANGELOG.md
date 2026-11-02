@@ -9,11 +9,6 @@ All notable changes to this project will be documented in this file.
 - Font Awesome 6 and 7 compatibility: `dist/font-awesome-6-7-line-awesome/css/all.min.css` replaces the Font Awesome stylesheet without changes to the markup. It knows the names of Font Awesome Free 6.7.2 and 7.3.1 and their old names, the `fa-solid`/`fa-regular`/`fa-brands` and `fas`/`far`/`fab` prefixes and the utility classes, and maps the Font Awesome 6/7 font families to the Line Awesome fonts. Icons are as wide as their glyph, as in Font Awesome 6; `:root { --fa-width: 1.25em; }` gives the fixed width of Font Awesome 7. It covers 76% of the free Font Awesome 6.7.2 icons and 72% of 7.3.1.
 - Font Awesome 6/7 names that Line Awesome lacks as exports (`lasHouse` → `lasHome`), as aliases in `icons.json`, and under `fa` in `metadata.json`.
 
-### Unchanged
-
-- The 1.x CSS, fonts and the Font Awesome 5 shim stay at the same paths and match 1.3.0 byte for byte, except `font-display: block` from 2.0.2.
-## 2.0.2
-
 ### Fixed
 
 - CSS: `font-display: block` instead of `auto` in every `@font-face`, as in Font Awesome. Icons are hidden for a short moment while the font loads instead of flashing a fallback glyph, and the Lighthouse font-display audit passes ([#72](https://github.com/icons8/line-awesome/issues/72)). The font files are unchanged.
@@ -21,6 +16,10 @@ All notable changes to this project will be documented in this file.
 - SCSS: `$la-css-prefix` can be overridden before the import: it is `!default` now, and the pull, spin, rotate and flip classes use it too ([#87](https://github.com/icons8/line-awesome/issues/87)).
 - SCSS: `$la-version` is the package version, and `$la-font-display` sets `font-display` for SCSS builds.
 - README: removed the link to a zip archive that the website no longer offers.
+
+### Unchanged
+
+- The 1.x CSS, fonts and the Font Awesome 5 shim stay at the same paths and match 1.3.0 byte for byte, except `font-display: block` (see Fixed).
 
 ## 2.0.1
 
