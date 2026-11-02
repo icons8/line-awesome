@@ -69,8 +69,10 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "build:font": "node scripts/build-font.mjs",
+    "build:all-icons": "node scripts/build-all-icons-page.mjs",
     "test": "vitest run",
     "check-bundle": "node scripts/check-bundle.mjs",
+    "test:visual": "vitest run --config vitest.visual.config.mjs",
     "test:watch": "vitest"
   },
   "peerDependencies": {
@@ -90,6 +92,9 @@
     "@resvg/resvg-js": "^2.6.2",
     "@types/react": "^19.3.0",
     "opentype.js": "^2.0.0",
+    "pixelmatch": "^8.0.0",
+    "playwright": "^1.64.1",
+    "pngjs": "^7.0.0",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "svg2ttf": "^6.1.0",

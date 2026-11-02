@@ -6,6 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { readAdditions } from '../scripts/additions.mjs';
 import { CSS_FILES, CSS_MARKER, FONTS_DIR, FONT_OF_STYLE, cssBase } from '../scripts/build-font.mjs';
 import { readCmap } from '../scripts/ttf-splice.mjs';
+import { PAGE, buildPage, classesWithoutGlyph } from '../scripts/build-all-icons-page.mjs';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
 const additions = readAdditions(root);
@@ -48,4 +49,18 @@ test('class names are unique and do not reuse a 1.3.0 class', () => {
   const v1 = cssBase(read(CSS_FILES[0]));
   expect(new Set(additions.map((icon) => icon.base)).size).toBe(additions.length);
   for (const { base } of additions) expect(v1).not.toContain(`.la-${base}:before`);
+});
+
+test('examples/all-icons/index.html is what the generator writes (run npm run build:all-icons)', () => {
+  expect(read(PAGE)).toBe(buildPage(root));
+});
+
+test('the page lists every icon class once per font that has it, and every added icon', () => {
+  const page = read(PAGE);
+  for (const { base, style } of additions) {
+    const prefix = { solid: 'las', regular: 'lar', brands: 'lab' }[style];
+    expect(page).toContain(`<i class="${prefix} la-${base}"></i>`);
+  }
+  // Only font-awesome-logo-full has a class and no glyph in 1.3.0.
+  expect(classesWithoutGlyph(root)).toEqual(['font-awesome-logo-full']);
 });

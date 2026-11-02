@@ -151,20 +151,17 @@ Search icons and copy their classes on the [Line Awesome page](https://icons8.co
 
 ### Icons added after 1.3.0
 
-The 1.3.0 font stays as it is, so sites that load it keep their icons byte for byte. Newer icons (`la-x-twitter`, `la-tiktok`, `la-sparkles` and others, listed in [`added-icons.json`](added-icons.json)) come in a second font with its own stylesheet. Load it after the main one:
+Icons added after 1.3.0 (`la-x-twitter`, `la-tiktok`, `la-sparkles` and others, listed in [`added-icons.json`](added-icons.json)) are in the main fonts and the main stylesheet: nothing to load besides `line-awesome.css`. Their glyphs were appended to the 1.3.0 fonts, so every earlier icon keeps its codepoint, glyph and shape, and a test compares them with the 1.3.0 fonts glyph by glyph.
 
 ```html
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/line-awesome@2/dist/line-awesome-additions/css/line-awesome-additions.min.css"
-/>
+<i class="lab la-x-twitter"></i>
 ```
 
-```js
-import 'line-awesome/dist/line-awesome-additions/css/line-awesome-additions.min.css';
-```
+As SVG icons they need nothing extra either: `labXTwitter` is exported like any other icon.
 
-The classes work as usual: `<i class="lab la-x-twitter"></i>`. As SVG icons they need nothing extra: `labXTwitter` is exported like any other icon.
+The old `.eot` and `.svg` fonts (Internet Explorer 8 and older) are not rebuilt and have no added icons. Every other browser uses WOFF2, WOFF or TTF.
+
+To see every icon in the fonts, open [`examples/all-icons/index.html`](examples/all-icons/README.md).
 
 ### Replacing Font Awesome
 
@@ -423,7 +420,7 @@ Working setups for each recipe live in [`examples/`](examples), and CI builds th
 
 ## Upgrading from 1.x
 
-Nothing changes for the font: the same CSS and font files at the same paths, the same `la-*`, `lar`, `las`, `lab` classes. Pinned CDN URLs such as `line-awesome@1.3.0` keep serving 1.3.0; unversioned ones serve 2.x with identical CSS and fonts.
+Nothing changes for the font: the same CSS and font files at the same paths, the same `la-*`, `lar`, `las`, `lab` classes. Pinned CDN URLs such as `line-awesome@1.3.0` keep serving 1.3.0; unversioned ones serve 2.x with the same icons, plus the ones added since (see [Icons added after 1.3.0](#icons-added-after-130)).
 
 **The package has a JavaScript entry now.** Published 1.x had none, so `import 'line-awesome'` did not resolve; in 2.x it gives the icons and loads no styles. Keep importing the CSS by its path, [as shown above](#npm). A CSS `@import 'line-awesome';` resolves to the stylesheet through the `style` export condition.
 
