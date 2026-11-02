@@ -97,8 +97,6 @@ Add the stylesheet to your page:
 
 Keep the version in the URL. Without it the CDN serves whatever version is latest.
 
-A zip archive with the font is on the [how-to page](https://icons8.com/line-awesome/howto).
-
 ### npm
 
 ```shell

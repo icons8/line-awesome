@@ -11,7 +11,16 @@ All notable changes to this project will be documented in this file.
 
 ### Unchanged
 
-- The 1.x CSS, fonts and the Font Awesome 5 shim are byte-identical to 1.3.0, at the same paths.
+- The 1.x CSS, fonts and the Font Awesome 5 shim stay at the same paths and match 1.3.0 byte for byte, except `font-display: block` from 2.0.2.
+## 2.0.2
+
+### Fixed
+
+- CSS: `font-display: block` instead of `auto` in every `@font-face`, as in Font Awesome. Icons are hidden for a short moment while the font loads instead of flashing a fallback glyph, and the Lighthouse font-display audit passes ([#72](https://github.com/icons8/line-awesome/issues/72)). The font files are unchanged.
+- SCSS: the `la-sm` size class, which the CSS already had ([#62](https://github.com/icons8/line-awesome/issues/62)).
+- SCSS: `$la-css-prefix` can be overridden before the import: it is `!default` now, and the pull, spin, rotate and flip classes use it too ([#87](https://github.com/icons8/line-awesome/issues/87)).
+- SCSS: `$la-version` is the package version, and `$la-font-display` sets `font-display` for SCSS builds.
+- README: removed the link to a zip archive that the website no longer offers.
 
 ## 2.0.1
 
