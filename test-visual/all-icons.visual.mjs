@@ -108,6 +108,18 @@ async function render(mode) {
       })),
     };
   });
+  // What each icon computes to: a `content` for ::before and a width of its own (the `<i>` is a block
+  // on the page, so measure it inline for a moment).
+  const computed = await page.evaluate(() =>
+    [...document.querySelectorAll('.cell i')].map((icon) => {
+      const content = getComputedStyle(icon, '::before').content;
+      icon.style.display = 'inline-block';
+      const width = icon.getBoundingClientRect().width;
+      icon.style.display = '';
+      return { content, width };
+    }),
+  );
+  layout.cells.forEach((cell, i) => Object.assign(cell, computed[i]));
   const png = new PNG({ width: layout.width, height: layout.height });
   for (let y = 0; y < layout.height; y += STRIP) {
     const height = Math.min(STRIP, layout.height - y);
@@ -118,6 +130,20 @@ async function render(mode) {
   return { png, layout };
 }
 
+// Pixels of the icon box that differ from the cell's own background (read next to the icon box).
+function ink(png, [x, y, w, h]) {
+  const at = (i, j) => (j * png.width + i) * 4;
+  const bg = at(x, y);
+  let n = 0;
+  for (let j = y; j < y + h; j++) {
+    for (let i = x; i < x + w; i++) {
+      const p = at(i, j);
+      if (png.data[p] !== png.data[bg] || png.data[p + 1] !== png.data[bg + 1] || png.data[p + 2] !== png.data[bg + 2]) n++;
+    }
+  }
+  return n;
+}
+
 const inside = (mask, width, [x, y, w, h]) => {
   let n = 0;
   for (let j = y; j < y + h; j++) for (let i = x; i < x + w; i++) n += mask[j * width + i];
@@ -126,7 +152,8 @@ const inside = (mask, width, [x, y, w, h]) => {
 
 test(`all icons: old ones render as with the 1.3.0 fonts, new ones are drawn (${browserName})`, async () => {
   const [before, after] = [await render('old'), await render('new')];
-  expect(after.layout.cells.map((c) => c.name)).toEqual(before.layout.cells.map((c) => c.name));
+  const key = (c) => `${c.group} ${c.name}`;
+  expect(after.layout.cells.map(key)).toEqual(before.layout.cells.map(key));
   expect(after.layout.cells.map((c) => c.cell)).toEqual(before.layout.cells.map((c) => c.cell));
   const { width, height } = after.layout;
   expect([before.png.width, before.png.height]).toEqual([width, height]);
@@ -137,10 +164,25 @@ test(`all icons: old ones render as with the 1.3.0 fonts, new ones are drawn (${
   const mask = new Uint8Array(width * height);
   for (let i = 0; i < mask.length; i++) mask[i] = diff.data[i * 4] === 255 && diff.data[i * 4 + 1] === 0 ? 1 : 0;
 
+  // Every icon on the page is drawn: a class that is not defined for its prefix has no ::before
+  // content and renders an empty cell, with the old fonts as with the new ones.
+  const groups = {};
+  for (const c of after.layout.cells) groups[c.group] = (groups[c.group] ?? 0) + 1;
+  const empty = after.layout.cells.flatMap((c) => {
+    const problems = [];
+    if (!c.content || c.content === 'none' || c.content === 'normal') problems.push(`content ${c.content}`);
+    if (!(c.width > 0)) problems.push(`width ${c.width}`);
+    if (ink(after.png, c.glyph) === 0) problems.push('no pixels');
+    return problems.length ? [`${key(c)}: ${problems.join(', ')}`] : [];
+  });
+  console.log(`${browserName}: cells per group ${JSON.stringify(groups)}, ${after.layout.cells.length - empty.length} of ${after.layout.cells.length} drawn`);
+  expect(empty.slice(0, 20), `${empty.length} cells are empty`).toEqual([]);
+  expect(groups.la, 'legacy names group').toBeGreaterThan(200);
+
   const oldCells = after.layout.cells.filter((c) => !added.has(c.name));
   const newCells = after.layout.cells.filter((c) => added.has(c.name));
   expect(newCells).toHaveLength(added.size);
-  expect(oldCells.length).toBeGreaterThan(1900);
+  expect(oldCells.length).toBeGreaterThan(1800);
 
   const moved = oldCells.map((c) => [c, inside(mask, width, c.cell)]).filter(([, n]) => n > MAX_CHANGED_PER_OLD_CELL);
   const drawn = newCells.map((c) => [c, inside(mask, width, c.glyph)]);
@@ -152,7 +194,7 @@ test(`all icons: old ones render as with the 1.3.0 fonts, new ones are drawn (${
     for (const [name, png] of [['old', before.png], ['new', after.png], ['diff', diff]]) writeFileSync(join(out, `${browserName}-${name}.png`), PNG.sync.write(png));
   }
   console.log(`${browserName}: ${oldCells.length} old icons, ${newCells.length} new; changed pixels: old ${moved.reduce((n, [, k]) => n + k, 0)}, new ${drawn.reduce((n, [, k]) => n + k, 0)} (${drawn.map(([c, k]) => `${c.name} ${k}`).join(', ')})`);
-  expect(moved.map(([c, n]) => `${c.group} ${c.name}: ${n} px`)).toEqual([]);
+  expect(moved.map(([c, n]) => `${key(c)}: ${n} px`)).toEqual([]);
   expect(faint.map(([c, n]) => `${c.name}: ${n} px`)).toEqual([]);
   expect(outside, 'pixels changed outside the icon cells').toBe(0);
 });

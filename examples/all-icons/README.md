@@ -1,6 +1,6 @@
 # All icons
 
-`index.html` shows every icon of the Line Awesome fonts on one page: the class name under each icon, in three groups by font: solid (`las`), regular (`lar`) and brands (`lab`). Icons added after 1.3.0 have a yellow background. A box at the top filters by name.
+`index.html` shows every icon of the Line Awesome fonts on one page: the class name under each icon, in four groups: solid (`las`), regular (`lar`) and brands (`lab`), by the font that has the icon, and "Legacy names" (`la`): Font Awesome 4 names such as `address-card-o`, which the stylesheet declares only as `.la.la-name`, so they work with the plain `la` class and not with `las`, `lar` or `lab`. Classes with no glyph in any font (`font-awesome-logo-full`) are not shown. Icons added after 1.3.0 have a yellow background. A box at the top filters by name.
 
 The page loads `../../dist/line-awesome/css/line-awesome.css` and nothing else.
 
@@ -21,7 +21,8 @@ npm run build:all-icons   # rewrites index.html
 
 `npm run test:visual` opens this page twice in Playwright, once with the 1.3.0 fonts from `font-source/1.3.0` and once with the fonts in `dist/`, takes screenshots of the whole page and compares them pixel by pixel (pixelmatch).
 
-- **Old icons must be identical**, with zero differing pixels per icon. The threshold is 0 on purpose: the new fonts keep the outlines of the old glyphs byte for byte and the same browser draws them, so any difference means a changed glyph. Measured: 0 differing pixels for all 1,942 old icons in Chromium, WebKit and Firefox, so there is no anti-aliasing noise to tolerate.
+- **Old icons must be identical**, with zero differing pixels per icon. The threshold is 0 on purpose: the new fonts keep the outlines of the old glyphs byte for byte and the same browser draws them, so any difference means a changed glyph. Measured: 0 differing pixels for all 1,809 old icons in Chromium, WebKit and Firefox, so there is no anti-aliasing noise to tolerate.
+- **Every cell is drawn.** In the new render each icon must have a computed `::before` content other than `none` and `normal`, a width of its own, and pixels that differ from its background. A class used with the wrong prefix has no content and fails here.
 - **New icons must be drawn.** The old render has nothing in their place; the new one must differ from it by at least 100 pixels in the icon box (at 32 px the 11 icons measure 151 to 336 in Chromium). An empty cell or a font that did not load fails.
 - Both renders must have loaded all three font faces, so two renders of a fallback font cannot pass for equal.
 

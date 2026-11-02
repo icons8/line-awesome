@@ -6,7 +6,7 @@ import { fileURLToPath } from 'node:url';
 import { readAdditions } from '../scripts/additions.mjs';
 import { CSS_FILES, CSS_MARKER, FONTS_DIR, FONT_OF_STYLE, cssBase } from '../scripts/build-font.mjs';
 import { readCmap } from '../scripts/ttf-splice.mjs';
-import { PAGE, buildPage, classesWithoutGlyph } from '../scripts/build-all-icons-page.mjs';
+import { PAGE, buildPage, classesWithoutGlyph, readClasses } from '../scripts/build-all-icons-page.mjs';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
 const additions = readAdditions(root);
@@ -63,4 +63,17 @@ test('the page lists every icon class once per font that has it, and every added
   }
   // Only font-awesome-logo-full has a class and no glyph in 1.3.0.
   expect(classesWithoutGlyph(root)).toEqual(['font-awesome-logo-full']);
+});
+
+test('names declared only as `.la.la-name:before` get the `la` prefix in their own group, the others las, lar or lab', () => {
+  const page = read(PAGE);
+  const { named, legacy } = readClasses(root);
+  expect(legacy.size).toBeGreaterThan(200);
+  for (const name of legacy.keys()) {
+    expect(named.has(name), name).toBe(false);
+    expect(page, name).toContain(`<i class="la la-${name}"></i>`);
+    for (const prefix of ['las', 'lar', 'lab']) expect(page, `${prefix} ${name}`).not.toContain(`<i class="${prefix} la-${name}"></i>`);
+  }
+  expect(page).toContain('Legacy names (la prefix)');
+  expect(page).not.toContain('la-font-awesome-logo-full');
 });

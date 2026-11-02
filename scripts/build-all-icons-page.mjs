@@ -1,5 +1,6 @@
-// Writes examples/all-icons/index.html: every icon class of line-awesome.css, in three groups
-// (las, lar, lab) by the font that has its codepoint.
+// Writes examples/all-icons/index.html: every icon class of line-awesome.css. Names that work with
+// any style class go in three groups (las, lar, lab) by the font that has their codepoint; names
+// declared only for the plain `la` class (Font Awesome 4 names) go in a fourth group.
 //
 //   node scripts/build-all-icons-page.mjs           write the page
 //   node scripts/build-all-icons-page.mjs --check   fail if the page differs from a fresh one
@@ -20,31 +21,55 @@ export const GROUPS = [
 
 const escape = (text) => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/"/g, '&quot;');
 
-// Every `.la-name:before { content: "\xxxx" }` of the stylesheet: class name -> codepoint.
+// Icon classes of the stylesheet with their codepoints, in two kinds:
+//   named: `.la-name:before`, which works with any style class (`las la-name`, `lar la-name`, ...);
+//   legacy: names declared only as `.la.la-name:before` (Font Awesome 4 names such as `address-card-o`),
+//           which work with the `la` class alone, and take their font from `.la.la-name`, else from `.la`.
 export function readClasses(root) {
   const css = readFileSync(join(root, 'dist/line-awesome/css/line-awesome.css'), 'utf8').replace(/\/\*[\s\S]*?\*\//g, '');
-  return new Map([...css.matchAll(/\.la-([a-z0-9-]+):before\s*\{\s*content:\s*"\\([0-9a-f]+)"/g)].map((m) => [m[1], parseInt(m[2], 16)]));
+  const named = new Map();
+  const compound = new Map();
+  for (const [, selectors, body] of css.matchAll(/([^{}]+)\{([^{}]*)\}/g)) {
+    const content = /content:\s*"\\([0-9a-f]+)"/.exec(body);
+    if (!content) continue;
+    for (const selector of selectors.split(',').map((text) => text.trim())) {
+      let match;
+      if ((match = /^\.la-([a-z0-9-]+):before$/.exec(selector))) named.set(match[1], parseInt(content[1], 16));
+      else if ((match = /^\.la\.la-([a-z0-9-]+):before$/.exec(selector))) compound.set(match[1], parseInt(content[1], 16));
+    }
+  }
+  const legacy = new Map([...compound].filter(([name]) => !named.has(name)));
+  return { named, legacy };
 }
+
+const readFonts = (root) =>
+  Object.fromEntries(Object.entries(FONT_OF_STYLE).map(([style, name]) => [style, readCmap(readFileSync(join(root, FONTS_DIR, `${name}.ttf`)))]));
 
 // Classes whose codepoint no font has (1.3.0 ships font-awesome-logo-full this way): nothing to show.
 export function classesWithoutGlyph(root = repoRoot) {
-  const fonts = Object.values(FONT_OF_STYLE).map((name) => readCmap(readFileSync(join(root, FONTS_DIR, `${name}.ttf`))));
-  return [...readClasses(root)].filter(([, codepoint]) => !fonts.some((cmap) => cmap.has(codepoint))).map(([name]) => name);
+  const fonts = Object.values(readFonts(root));
+  const { named, legacy } = readClasses(root);
+  return [...named, ...legacy].filter(([, codepoint]) => !fonts.some((cmap) => cmap.has(codepoint))).map(([name]) => name);
 }
 
 export function buildPage(root = repoRoot) {
-  const classes = readClasses(root);
+  const { named, legacy } = readClasses(root);
   const added = new Set(readAdditions(root).map((icon) => icon.base));
-  const fonts = Object.fromEntries(
-    Object.entries(FONT_OF_STYLE).map(([style, name]) => [style, readCmap(readFileSync(join(root, FONTS_DIR, `${name}.ttf`)))]),
-  );
+  const fonts = readFonts(root);
+  const cell = (prefix, name) =>
+    `<figure class="cell${added.has(name) ? ' is-new' : ''}" data-name="${name}"><i class="${prefix} la-${name}"></i><figcaption>${prefix === 'la' ? 'la ' : ''}la-${name}</figcaption></figure>`;
+  const inAnyFont = (codepoint) => GROUPS.some(({ style }) => fonts[style].has(codepoint));
   const sections = GROUPS.map(({ style, prefix, title }) => {
-    const names = [...classes].filter(([, codepoint]) => fonts[style].has(codepoint)).map(([name]) => name).sort();
-    const cells = names.map(
-      (name) =>
-        `<figure class="cell${added.has(name) ? ' is-new' : ''}" data-name="${name}"><i class="${prefix} la-${name}"></i><figcaption>la-${name}</figcaption></figure>`,
-    );
-    return { style, prefix, title, count: names.length, html: cells.join('\n') };
+    const names = [...named].filter(([, codepoint]) => fonts[style].has(codepoint)).map(([name]) => name).sort();
+    return { prefix, title, count: names.length, html: names.map((name) => cell(prefix, name)).join('\n') };
+  });
+  const old = [...legacy].filter(([, codepoint]) => inAnyFont(codepoint)).map(([name]) => name).sort();
+  sections.push({
+    prefix: 'la',
+    title: 'Legacy names (la prefix)',
+    note: 'Font Awesome 4 names that the stylesheet declares only for the plain <code>la</code> class.',
+    count: old.length,
+    html: old.map((name) => cell('la', name)).join('\n'),
   });
 
   return `<!doctype html>
@@ -72,12 +97,12 @@ export function buildPage(root = repoRoot) {
 </head>
 <body>
 <h1>Line Awesome: all icons</h1>
-<p>${sections.reduce((n, s) => n + s.count, 0)} icons in ${sections.length} fonts, rendered from <code>dist/line-awesome/css/line-awesome.css</code>. Icons added after 1.3.0 are highlighted.</p>
+<p>${sections.reduce((n, s) => n + s.count, 0)} icons in ${sections.length} groups, rendered from <code>dist/line-awesome/css/line-awesome.css</code>. Icons added after 1.3.0 are highlighted.</p>
 <input id="filter" type="search" placeholder="Filter by name" aria-label="Filter by name">
 ${sections
   .map(
     (s) => `<section id="${s.prefix}">
-<h2>${escape(s.title)}: <code>${s.prefix}</code> (${s.count})</h2>
+<h2>${escape(s.title)}: <code>${s.prefix}</code> (${s.count})</h2>${s.note ? `\n<p>${s.note}</p>` : ''}
 <div class="grid">
 ${s.html}
 </div>
