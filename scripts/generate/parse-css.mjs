@@ -1,5 +1,6 @@
-// Parses the v1 CSS: icon classes with codepoints and the FA4 `.la.la-*` section.
+// Parses the 1.3.0 part of the CSS: icon classes with codepoints and the FA4 `.la.la-*` section.
 import { readFileSync } from 'node:fs';
+import { cssBase } from '../build-font.mjs';
 
 const RULE = /([^{}]+)\{([^{}]*)\}/g;
 
@@ -27,7 +28,8 @@ function styleOf(decl) {
 }
 
 export function parseCss(path) {
-  const css = readFileSync(path, 'utf8').replace(/\/\*[\s\S]*?\*\//g, '');
+  // The generated block at the end holds the icons added after 1.3.0; they come from added-icons.json.
+  const css = cssBase(readFileSync(path, 'utf8')).replace(/\/\*[\s\S]*?\*\//g, '');
   const classes = new Map(); // base name → codepoint
   const fa4 = new Map(); // fa4 name → { codepoint?, style? }
 

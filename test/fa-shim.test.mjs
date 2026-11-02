@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { expect, test } from 'vitest';
 import { buildModel, faMatches } from '../scripts/generate/model.mjs';
 import { FA_SHIM_DIR, faShimCss, minifyCss } from '../scripts/generate/fa-shim.mjs';
+import { readCmap } from '../scripts/ttf-splice.mjs';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
 const model = buildModel(root);
@@ -59,4 +60,18 @@ test('prefixes, families and fonts', () => {
   for (const utility of ['.fa-fw', '.fa-spin', '.fa-rotate-90', '.fa-flip-horizontal', '.fa-stack', '.fa-ul', '.fa-li', '.fa-border', '.fa-pull-left', '.sr-only', '.fa-xs', '.fa-10x']) {
     expect(shim, utility).toContain(utility);
   }
+});
+
+// The shim loads the main Line Awesome fonts, so the icons added after 1.3.0 show through it
+// without a second stylesheet.
+test('FA6/7 names of the added icons point at glyphs of the main fonts', () => {
+  const cmap = (name) => readCmap(readFileSync(join(root, 'dist/line-awesome/fonts', `${name}.ttf`)));
+  const brands = cmap('la-brands-400');
+  const solid = cmap('la-solid-900');
+  expect(rule('.fa-x-twitter')).toContain('--fa: "\\e61b"');
+  expect(rule('.fa-tiktok')).toContain('--fa: "\\e07b"');
+  expect(rule('.fa-google-scholar')).toContain('--fa: "\\e63b"');
+  expect(rule('.fa-trailer')).toContain('--fa: "\\e041"');
+  for (const cp of [0xe61b, 0xe07b, 0xe63b]) expect(brands.has(cp), cp.toString(16)).toBe(true);
+  expect(solid.has(0xe041)).toBe(true);
 });

@@ -89,6 +89,7 @@
     "@iconify/types": "^2.0.0",
     "@resvg/resvg-js": "^2.6.2",
     "@types/react": "^19.3.0",
+    "opentype.js": "^2.0.0",
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "svg2ttf": "^6.1.0",
