@@ -4,7 +4,7 @@
   font-family: 'Line Awesome Additions';
   font-style: normal;
   font-weight: 400;
-  font-display: auto;
+  font-display: block;
   src: url("../fonts/la-additions.woff2") format("woff2"), url("../fonts/la-additions.woff") format("woff"), url("../fonts/la-additions.ttf") format("truetype"); }
 
 .la-x-twitter:before,

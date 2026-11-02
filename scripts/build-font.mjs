@@ -46,7 +46,7 @@ function css(icons) {
   const selectors = icons.map((icon) => `.la-${icon.base}:before`);
   return [
     `/* Line Awesome: icons added after 1.3.0. Load after line-awesome.css. */`,
-    `@font-face {\n  font-family: '${FONT_FAMILY}';\n  font-style: normal;\n  font-weight: 400;\n  font-display: auto;\n  src: ${src}; }`,
+    `@font-face {\n  font-family: '${FONT_FAMILY}';\n  font-style: normal;\n  font-weight: 400;\n  font-display: block;\n  src: ${src}; }`,
     `${selectors.join(',\n')} {\n  font-family: '${FONT_FAMILY}';\n  font-weight: 400;\n  font-synthesis: none; }`,
     ...icons.map((icon) => `.la-${icon.base}:before {\n  content: "\\${icon.codepoint}"; }`),
   ].join('\n\n') + '\n';

@@ -78,3 +78,12 @@ test('icons from added-icons.json join the set with their manifest style; 1.3.0 
   expect(byId.get('lab-twitter')).toMatchObject({ codepoint: 'f099' });
   expect(byId.get('lab-twitter').added).toBeUndefined();
 });
+
+test('FA6/7 names Line Awesome lacks re-export the matched icon; its own names keep their meaning', () => {
+  const byName = new Map(model.faAliases.map((alias) => [alias.exportName, alias]));
+  expect(byName.get('lasHouse').target.exportName).toBe('lasHome');
+  expect(byName.get('lasMagnifyingGlass').target.exportName).toBe('lasSearch');
+  expect(byName.has('lasHands')).toBe(false); // FA6 `hands` is sign language; `lasHands` stays the FA5 icon
+  const own = new Set([...model.icons, ...model.aliases].map((item) => item.exportName));
+  for (const alias of model.faAliases) expect(own.has(alias.exportName), alias.exportName).toBe(false);
+});

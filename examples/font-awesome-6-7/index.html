@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Line Awesome as Font Awesome 6/7</title>
+  <!-- The only change on a Font Awesome 6 or 7 site: this stylesheet instead of Font Awesome's. -->
+  <link rel="stylesheet" href="../../dist/font-awesome-6-7-line-awesome/css/all.min.css">
+  <style>
+    body { font: 16px/1.5 system-ui, sans-serif; margin: 2rem; color: #222; }
+    table { border-collapse: collapse; }
+    td { padding: .4rem .8rem; border-bottom: 1px solid #eee; vertical-align: middle; }
+    td:first-child { font-size: 28px; text-align: center; }
+    code { font-size: 13px; }
+    .pseudo::before { font-family: "Font Awesome 6 Free"; font-weight: 900; content: "\f015"; font-size: 28px; }
+  </style>
+</head>
+<body>
+  <h1>Font Awesome 6/7 markup on Line Awesome</h1>
+  <table>
+    <tr><td><i class="fa-solid fa-house"></i></td><td><code>fa-solid fa-house</code> (FA6/7 name)</td></tr>
+    <tr><td><i class="fas fa-house"></i></td><td><code>fas fa-house</code></td></tr>
+    <tr><td><i class="fa fa-home"></i></td><td><code>fa fa-home</code> (old name)</td></tr>
+    <tr><td><i class="fa-regular fa-face-smile"></i></td><td><code>fa-regular fa-face-smile</code></td></tr>
+    <tr><td><i class="far fa-star"></i> <i class="fas fa-star"></i></td><td><code>far fa-star</code> / <code>fas fa-star</code></td></tr>
+    <tr><td><i class="fa-regular fa-address-card"></i></td><td><code>fa-regular fa-address-card</code></td></tr>
+    <tr><td><i class="fa-brands fa-github"></i> <i class="fab fa-square-github"></i></td><td><code>fa-brands fa-github</code>, <code>fab fa-square-github</code></td></tr>
+    <tr><td><i class="fa-solid fa-magnifying-glass"></i> <i class="fa-solid fa-xmark"></i> <i class="fa-solid fa-circle-check"></i></td><td>renamed in FA6: <code>magnifying-glass</code>, <code>xmark</code>, <code>circle-check</code></td></tr>
+    <tr><td><i class="fa-solid fa-hands"></i></td><td><code>fa-hands</code> — sign language, as in FA6</td></tr>
+    <tr><td><i class="fa-solid fa-gear fa-spin"></i> <i class="fa-solid fa-arrow-right fa-rotate-90"></i> <i class="fa-solid fa-heart fa-xs"></i></td><td><code>fa-spin</code>, <code>fa-rotate-90</code>, <code>fa-xs</code></td></tr>
+    <tr><td><span class="fa-stack"><i class="fa-solid fa-square fa-stack-2x"></i><i class="fa-brands fa-twitter fa-stack-1x fa-inverse"></i></span></td><td><code>fa-stack</code></td></tr>
+    <tr><td><span class="pseudo"></span></td><td>own CSS: <code>font-family: "Font Awesome 6 Free"; content: "\f015"</code></td></tr>
+  </table>
+</body>
+</html>

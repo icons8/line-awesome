@@ -1,7 +1,9 @@
 // Hashes of v1 files that must stay byte-identical to line-awesome@1.3.0:
 // CSS, fonts, the FA shim and svg/. Unversioned CDN URLs point at them.
-// SCSS is excluded: 2.0.0 ships the 1.3.1 fixes. Icons added later (added-icons.json) may add
-// files next to these, never change them.
+// SCSS is excluded: 2.0.0 ships the 1.3.1 fixes.
+// The one intended change in CSS since 1.3.0 is `font-display: block` instead of `auto`
+// (2.0.2, issue #72); it is reverted before hashing, so anything else still fails the check.
+// Icons added later (added-icons.json) may add files next to these, never change them.
 //
 //   node scripts/legacy-hashes.mjs --write <root>   write the fixture from an unpacked 1.3.0 tarball
 //   node scripts/legacy-hashes.mjs [root]           check root (defaults to the repository)
@@ -21,8 +23,17 @@ function walk(dir) {
   });
 }
 
+// The FA6/7 shim (2.1.0) is new and generated, see test/fa-shim.test.mjs.
 function isLegacy(path) {
-  return !path.startsWith('dist/line-awesome/scss/');
+  return !path.startsWith('dist/line-awesome/scss/') && !path.startsWith('dist/font-awesome-6-7-line-awesome/');
+}
+
+const FONT_DISPLAY = /font-display:( ?)block/g;
+
+function legacyBytes(root, file) {
+  const bytes = readFileSync(join(root, file));
+  if (!file.endsWith('.css')) return bytes;
+  return Buffer.from(bytes.toString('utf8').replace(FONT_DISPLAY, 'font-display:$1auto'), 'utf8');
 }
 
 export function hashLegacy(root) {
@@ -31,7 +42,7 @@ export function hashLegacy(root) {
     .filter(isLegacy)
     .sort();
   return Object.fromEntries(
-    files.map((file) => [file, createHash('sha256').update(readFileSync(join(root, file))).digest('hex')]),
+    files.map((file) => [file, createHash('sha256').update(legacyBytes(root, file)).digest('hex')]),
   );
 }
 

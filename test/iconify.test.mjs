@@ -24,3 +24,10 @@ test('every name from @iconify-json/la resolves', () => {
   const ours = new Set([...Object.keys(set.icons), ...Object.keys(set.aliases)]);
   expect(iconify.names.filter((name) => !ours.has(name))).toEqual([]);
 });
+
+test('FA6/7 names are aliases in icons.json and listed in metadata.json', async () => {
+  const { readFileSync } = await import('node:fs');
+  const read = (file) => JSON.parse(readFileSync(new URL(`../lib/${file}`, import.meta.url), 'utf8'));
+  expect(read('icons.json').aliases['magnifying-glass']).toEqual({ parent: 'search' });
+  expect(read('metadata.json').find((entry) => entry.name === 'home').fa).toContain('house');
+});
