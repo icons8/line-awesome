@@ -31,7 +31,7 @@
 
 # Icons8 Line Awesome
 
-Line Awesome is a free set of more than 1,500 line icons from [Icons8](https://icons8.com) in regular, solid and brand styles. It is based on the [Icons8 Windows 10 style](https://icons8.com/icons/windows), and its class names follow Font Awesome 5, so it works as a drop-in replacement for it.
+Line Awesome is a free set of more than 1,500 line icons from [Icons8](https://icons8.com) in regular, solid and brand styles. It is based on the [Icons8 Windows 10 style](https://icons8.com/icons/windows), and its class names follow Font Awesome 5, so it works as a drop-in replacement for it, and a separate stylesheet replaces Font Awesome 6 and 7.
 
 Use it as a web font with CSS classes, import icons one by one as SVG for Vue, React or plain JavaScript, or get them as components through [unplugin-icons](#bundler-plugins) in Vite, webpack, Rollup and Nuxt.
 
@@ -153,7 +153,22 @@ Search icons and copy their classes on the [Line Awesome page](https://icons8.co
 
 ### Replacing Font Awesome
 
-If your markup already uses Font Awesome 5 classes (`fas fa-star`, `fab fa-github`), swap the Font Awesome stylesheet for this one and keep the markup:
+Swap the Font Awesome stylesheet for the Line Awesome one that matches your Font Awesome version and keep the markup.
+
+**Font Awesome 6 or 7** (`fa-solid fa-house`, `fas fa-house`, `fa-brands fa-github`):
+
+```html
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/line-awesome@2/dist/font-awesome-6-7-line-awesome/css/all.min.css"
+/>
+```
+
+It knows the names of Font Awesome Free 6.7.2 and 7.3.1 and their old names (`fa-home` for `fa-house`), the `fa-solid`, `fa-regular`, `fa-brands` and `fas`, `far`, `fab` prefixes, and the utility classes: sizes, `fa-fw`, lists, animations, rotation, `fa-stack`, `sr-only`. CSS of your own that sets `font-family: "Font Awesome 6 Free"` (or 7) and a codepoint gets the Line Awesome font too.
+
+Line Awesome has about three quarters of the free Font Awesome icons: 76% of 6.7.2 and 72% of 7.3.1. A class for an icon it lacks shows nothing, as an unknown class does in Font Awesome. A regular icon that Line Awesome has only in solid shows the solid one. Check the icons you use on the [Line Awesome page](https://icons8.com/line-awesome) or with [`examples/font-awesome-6-7`](examples/font-awesome-6-7/index.html).
+
+**Font Awesome 5** (`fas fa-star`, `fab fa-github`):
 
 ```html
 <link
@@ -162,7 +177,7 @@ If your markup already uses Font Awesome 5 classes (`fas fa-star`, `fab fa-githu
 />
 ```
 
-It is the Font Awesome 5.11.2 stylesheet with Line Awesome fonts in place of the Font Awesome ones.
+It is the Font Awesome 5.11.2 stylesheet with Line Awesome fonts in place of the Font Awesome ones. Keep it for Font Awesome 5 markup: a few names, such as `fa-desktop` and `fa-hands`, mean different icons in 5 and 6.
 
 ## SVG icons
 
@@ -398,6 +413,8 @@ Nothing changes for the font: the same CSS and font files at the same paths, the
 **Sass:** use `@use 'pkg:line-awesome'` with `$la-font-path`, [as shown above](#npm).
 
 **Font Awesome 4 names** from the font's compatibility section (`la la-close`, `la la-star-o`) are exported too, marked deprecated: `lasClose` points to `lasTimes`, `larStarO` to `larStar`.
+
+**Font Awesome 6 and 7 names** that Line Awesome lacks are exported as well (since 2.1.0): `lasHouse` is `lasHome`, `lasMagnifyingGlass` is `lasSearch`. They are also aliases in `icons.json` and listed under `fa` in `metadata.json`.
 
 **The JavaScript is ESM only.** Node 20.19+ and all current bundlers load it. `require('line-awesome')` works on Node 20.19+; on Node 18 use `import` instead. Jest with babel-jest needs to be told to transform the package:
 

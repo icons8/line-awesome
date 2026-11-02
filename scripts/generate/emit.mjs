@@ -29,6 +29,18 @@ function aliasModule(alias) {
   };
 }
 
+function faAliasModule(alias) {
+  const target = alias.target.exportName;
+  const versions = alias.versions.map((version) => version.split('.')[0]).sort().join('/');
+  return {
+    js: `export { ${target} as ${alias.exportName}, ${target} as default } from './${alias.target.id}.js';\n`,
+    dts:
+      TYPE_IMPORT +
+      `/** Font Awesome ${versions} name (\`fa-${alias.fa}\`) of {@link ${target}}. */\n` +
+      `export declare const ${alias.exportName}: IconData;\nexport default ${alias.exportName};\n`,
+  };
+}
+
 function iconsJson(model, version) {
   const { icons, aliases } = iconifyNames(model);
   return {
@@ -53,11 +65,15 @@ function iconsJson(model, version) {
 function metadata(model) {
   const byBase = new Map();
   for (const icon of model.icons) {
-    const entry = byBase.get(icon.base) ?? { name: icon.base, codepoint: icon.codepoint, exports: {}, fa4: [] };
+    const entry = byBase.get(icon.base) ?? { name: icon.base, codepoint: icon.codepoint, exports: {}, fa4: [], fa: [] };
     entry.exports[icon.style] = icon.exportName;
     byBase.set(icon.base, entry);
   }
   for (const alias of model.aliases) byBase.get(alias.target.base).fa4.push(alias.fa4);
+  for (const alias of model.faAliases) {
+    const { fa } = byBase.get(alias.target.base);
+    if (!fa.includes(alias.fa)) fa.push(alias.fa);
+  }
   return [...byBase.values()];
 }
 
@@ -70,6 +86,7 @@ export function emit(model, outDir, { version }) {
   for (const [item, module] of [
     ...model.icons.map((icon) => [icon, iconModule(icon)]),
     ...model.aliases.map((alias) => [alias, aliasModule(alias)]),
+    ...model.faAliases.map((alias) => [alias, faAliasModule(alias)]),
   ]) {
     writeFileSync(join(iconsDir, `${item.id}.js`), module.js);
     writeFileSync(join(iconsDir, `${item.id}.d.ts`), module.dts);

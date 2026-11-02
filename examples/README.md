@@ -8,6 +8,7 @@ One small project per bundler recipe in the [README](../README.md). CI builds ea
 | [`vite-vue`](vite-vue) | `LaIcon`, `<i-la-…>` tags through the resolver, v1 SCSS through `pkg:line-awesome` |
 | [`webpack-react`](webpack-react) | `LaIcon`, `~icons/line-awesome/…` components, v1 CSS |
 | [`rollup-vanilla`](rollup-vanilla) | `toSvgString` with 1, 10 and all icons, `raw` SVG strings through unplugin-icons |
+| [`font-awesome-6-7`](font-awesome-6-7/index.html) | Font Awesome 6/7 markup on the Line Awesome shim; a static page: open it from a clone, the shim is committed in `dist/` (not built by CI) |
 
 ## Running one
 
