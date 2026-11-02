@@ -6,7 +6,7 @@ All notable changes to this project will be documented in this file.
 
 ### Added
 
-- Font Awesome 6 and 7 compatibility: `dist/font-awesome-6-7-line-awesome/css/all.min.css` replaces the Font Awesome stylesheet without changes to the markup. It knows the names of Font Awesome Free 6.7.2 and 7.3.1 and their old names, the `fa-solid`/`fa-regular`/`fa-brands` and `fas`/`far`/`fab` prefixes and the utility classes, and maps the Font Awesome 6/7 font families to the Line Awesome fonts. It covers 76% of the free Font Awesome 6.7.2 icons and 72% of 7.3.1.
+- Font Awesome 6 and 7 compatibility: `dist/font-awesome-6-7-line-awesome/css/all.min.css` replaces the Font Awesome stylesheet without changes to the markup. It knows the names of Font Awesome Free 6.7.2 and 7.3.1 and their old names, the `fa-solid`/`fa-regular`/`fa-brands` and `fas`/`far`/`fab` prefixes and the utility classes, and maps the Font Awesome 6/7 font families to the Line Awesome fonts. Icons are as wide as their glyph, as in Font Awesome 6; `:root { --fa-width: 1.25em; }` gives the fixed width of Font Awesome 7. It covers 76% of the free Font Awesome 6.7.2 icons and 72% of 7.3.1.
 - Font Awesome 6/7 names that Line Awesome lacks as exports (`lasHouse` → `lasHome`), as aliases in `icons.json`, and under `fa` in `metadata.json`.
 
 ### Unchanged

@@ -66,10 +66,11 @@ function iconRules(model) {
 }
 
 export function faShimCss(model, root, { version }) {
-  const utilities = readFileSync(join(root, 'scripts/data/fa-utilities.css'), 'utf8').replace(
-    "'Font Awesome 7 Free'",
-    "'Line Awesome Free'",
-  );
+  const utilities = readFileSync(join(root, 'scripts/data/fa-utilities.css'), 'utf8')
+    .replace("'Font Awesome 7 Free'", "'Line Awesome Free'")
+    // FA7 makes every icon 1.25em wide; FA6 sizes it by the glyph and gives 1.25em only to fa-fw.
+    // Glyph width keeps FA6 layouts in place; FA7 sites restore theirs with :root { --fa-width: 1.25em }.
+    .replace('width: var(--fa-width, 1.25em);', 'width: var(--fa-width, auto);');
   const faVersions = Object.keys(model.faNames).join(' and ');
   const faces = [];
   for (const family of ['Line Awesome', 'Font Awesome 6', 'Font Awesome 7']) {

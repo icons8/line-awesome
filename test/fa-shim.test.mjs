@@ -37,6 +37,12 @@ test('FA6/7 names resolve by codepoint first: renamed icons keep their FA meanin
   expect(rule('.fa-github')).toContain('--fa: "\\f09b"');
 });
 
+test('icons are as wide as their glyph, as in Font Awesome 6; fa-fw makes them 1.25em', () => {
+  expect(shim).toContain('width: var(--fa-width, auto);');
+  expect(shim).not.toContain('width: var(--fa-width, 1.25em)');
+  expect(shim).toMatch(/\.fa-fw,\n\.fa-width-fixed \{\n {2}--fa-width: 1\.25em;/);
+});
+
 test('a free regular icon without a Line Awesome regular glyph falls back to solid', () => {
   expect(shim).toMatch(/:is\(\.far, \.fa-regular\)\.fa-[a-z0-9-]+ \{\n {2}--fa-style: 900;/);
 });

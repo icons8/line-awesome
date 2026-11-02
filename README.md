@@ -166,6 +166,8 @@ Swap the Font Awesome stylesheet for the Line Awesome one that matches your Font
 
 It knows the names of Font Awesome Free 6.7.2 and 7.3.1 and their old names (`fa-home` for `fa-house`), the `fa-solid`, `fa-regular`, `fa-brands` and `fas`, `far`, `fab` prefixes, and the utility classes: sizes, `fa-fw`, lists, animations, rotation, `fa-stack`, `sr-only`. CSS of your own that sets `font-family: "Font Awesome 6 Free"` (or 7) and a codepoint gets the Line Awesome font too.
 
+Icons are as wide as their glyph, as in Font Awesome 6, and `fa-fw` makes them 1.25em wide. Font Awesome 7 gives every icon the fixed width; to keep that, add `:root { --fa-width: 1.25em; }`.
+
 Line Awesome has about three quarters of the free Font Awesome icons: 76% of 6.7.2 and 72% of 7.3.1. A class for an icon it lacks shows nothing, as an unknown class does in Font Awesome. A regular icon that Line Awesome has only in solid shows the solid one. Check the icons you use on the [Line Awesome page](https://icons8.com/line-awesome) or with [`examples/font-awesome-6-7`](examples/font-awesome-6-7/index.html).
 
 **Font Awesome 5** (`fas fa-star`, `fab fa-github`):

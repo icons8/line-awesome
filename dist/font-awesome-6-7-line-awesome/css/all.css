@@ -103,7 +103,7 @@
   line-height: 1;
   text-align: center;
   text-rendering: auto;
-  width: var(--fa-width, 1.25em);
+  width: var(--fa-width, auto);
 }
 
 :is(.fas,
