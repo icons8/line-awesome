@@ -74,7 +74,72 @@ export function buildModel(root) {
     aliases.push({ id: `${PREFIX[alias.style]}-${alias.name}`, exportName: name, fa4: alias.name, target });
   }
 
-  return { icons, aliases, skipped };
+  const model = { icons, aliases, skipped };
+  model.faNames = JSON.parse(readFileSync(join(root, 'scripts/data/fa-names.json'), 'utf8'));
+  model.faAliases = faAliases(model, model.faNames);
+  return model;
+}
+
+const FA_STYLE = { s: 'solid', r: 'regular', b: 'brands' };
+
+// Font Awesome 6/7 icon → Line Awesome icon of the same style. The codepoint decides first:
+// FA keeps it when an icon is renamed, while a reused name can change meaning (`hands`,
+// `transgender` in FA6 are not the FA5 icons). Then the name and its old names, including the
+// FA4 names of the v1 CSS. A free regular icon without a regular twin falls back to solid.
+export function faMatches(model, faIcons) {
+  const byCodepoint = new Map(model.icons.map((icon) => [`${icon.style}:${icon.codepoint}`, icon]));
+  const byName = new Map(model.icons.map((icon) => [`${icon.style}:${icon.base}`, icon]));
+  for (const alias of model.aliases) byName.set(`${alias.target.style}:${alias.fa4}`, alias.target);
+
+  const find = (style, codepoint, names) =>
+    byCodepoint.get(`${style}:${codepoint}`) ?? names.map((name) => byName.get(`${style}:${name}`)).find(Boolean);
+
+  const matches = new Map(); // name → { solid?, regular?, brands? }
+  let pairs = 0;
+  let matched = 0;
+  for (const [name, [codepoint, styles, oldNames]] of Object.entries(faIcons)) {
+    const names = [name, ...oldNames];
+    const entry = {};
+    for (const code of styles) {
+      const style = FA_STYLE[code];
+      pairs++;
+      const icon = find(style, codepoint, names) ?? (style === 'regular' ? find('solid', codepoint, names) : undefined);
+      if (!icon) continue;
+      entry[style] = icon;
+      matched++;
+    }
+    if (Object.keys(entry).length) matches.set(name, entry);
+  }
+  return { matches, pairs, matched };
+}
+
+// FA6/7 names that Line Awesome lacks become re-exports of the matched icon (`lasHouse` → `lasHome`).
+// A name Line Awesome already has keeps its Line Awesome meaning. FA7 wins over FA6 on a conflict.
+export function faAliases(model, faNames) {
+  const taken = new Set([...model.icons, ...model.aliases].map((item) => item.exportName));
+  const result = new Map(); // exportName → { id, exportName, fa, target, versions }
+  for (const version of Object.keys(faNames).sort(compareVersions).reverse()) {
+    for (const [name, entry] of faMatches(model, faNames[version]).matches) {
+      for (const target of Object.values(entry)) {
+        const aliasName = exportName(target.style, name);
+        if (taken.has(aliasName)) continue;
+        const existing = result.get(aliasName);
+        if (existing) {
+          existing.versions.push(version);
+          continue;
+        }
+        result.set(aliasName, { id: `${PREFIX[target.style]}-${name}`, exportName: aliasName, fa: name, target, versions: [version] });
+      }
+    }
+  }
+  return [...result.values()].sort((a, b) => a.id.localeCompare(b.id));
+}
+
+function compareVersions(a, b) {
+  const pa = a.split('.').map(Number);
+  const pb = b.split('.').map(Number);
+  for (let i = 0; i < Math.max(pa.length, pb.length); i++) if ((pa[i] ?? 0) !== (pb[i] ?? 0)) return (pa[i] ?? 0) - (pb[i] ?? 0);
+  return 0;
 }
 
 // Names as in @iconify-json/la: regular and brands unsuffixed, solid with `-solid`;
@@ -94,6 +159,11 @@ export function iconifyNames(model) {
   const nameOf = new Map([...icons].map(([name, icon]) => [icon, name]));
   for (const alias of model.aliases) {
     if (!icons.has(alias.fa4) && !aliases.has(alias.fa4)) aliases.set(alias.fa4, nameOf.get(alias.target));
+  }
+  for (const alias of model.faAliases ?? []) {
+    const { target } = alias;
+    const name = target.style === 'solid' && regularCodepoints.has(target.codepoint) ? `${alias.fa}-solid` : alias.fa;
+    if (!icons.has(name) && !aliases.has(name)) aliases.set(name, nameOf.get(target));
   }
   return { icons, aliases };
 }

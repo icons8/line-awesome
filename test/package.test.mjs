@@ -54,5 +54,5 @@ test('installing runs no scripts and pulls no dependencies', () => {
 test('tarball stays within its size budget', () => {
   expect(packed.size).toBeLessThan(5 * 1024 * 1024);
   expect(packed.unpackedSize).toBeLessThan(13 * 1024 * 1024);
-  expect(packed.entryCount).toBeLessThan(5500);
+  expect(packed.entryCount).toBeLessThan(6500); // 2.1.0: +894 re-export files for FA6/7 names
 });

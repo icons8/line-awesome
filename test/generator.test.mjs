@@ -64,3 +64,12 @@ test('fill-rule survives optimization', () => {
   const github = model.icons.find((icon) => icon.id === 'lab-github');
   expect(github.data.body).toMatch(/fill-rule="evenodd"/);
 });
+
+test('FA6/7 names Line Awesome lacks re-export the matched icon; its own names keep their meaning', () => {
+  const byName = new Map(model.faAliases.map((alias) => [alias.exportName, alias]));
+  expect(byName.get('lasHouse').target.exportName).toBe('lasHome');
+  expect(byName.get('lasMagnifyingGlass').target.exportName).toBe('lasSearch');
+  expect(byName.has('lasHands')).toBe(false); // FA6 `hands` is sign language; `lasHands` stays the FA5 icon
+  const own = new Set([...model.icons, ...model.aliases].map((item) => item.exportName));
+  for (const alias of model.faAliases) expect(own.has(alias.exportName), alias.exportName).toBe(false);
+});

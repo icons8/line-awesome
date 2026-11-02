@@ -21,8 +21,9 @@ function walk(dir) {
   });
 }
 
+// The FA6/7 shim (2.1.0) is new and generated, see test/fa-shim.test.mjs.
 function isLegacy(path) {
-  return !path.startsWith('dist/line-awesome/scss/');
+  return !path.startsWith('dist/line-awesome/scss/') && !path.startsWith('dist/font-awesome-6-7-line-awesome/');
 }
 
 const FONT_DISPLAY = /font-display:( ?)block/g;
