@@ -6,6 +6,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { compareLegacy } from '../scripts/legacy-hashes.mjs';
+import { additionFiles } from '../scripts/additions.mjs';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
 const manifest = JSON.parse(readFileSync(join(root, 'package.json'), 'utf8'));
@@ -28,6 +29,10 @@ test('tarball holds dist, svg and lib only', () => {
 test('legacy files inside the tarball match line-awesome@1.3.0', () => {
   const { missing, changed, added } = compareLegacy(pkg);
   expect({ missing, changed, added }).toEqual({ missing: [], changed: [], added: [] });
+});
+
+test('the tarball ships the icons added after 1.3.0 with their font and CSS', () => {
+  for (const file of additionFiles(root)) expect(existsSync(join(pkg, file)), file).toBe(true);
 });
 
 test('every exports target exists in the tarball', () => {

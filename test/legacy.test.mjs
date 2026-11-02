@@ -1,5 +1,6 @@
 // v1 consumers load CSS and fonts from unversioned CDN URLs, which will serve 2.0.0.
-// These files must stay byte-identical to line-awesome@1.3.0, except `font-display: block` in CSS (2.0.2).
+// These files must stay byte-identical to line-awesome@1.3.0, except `font-display: block` in CSS (2.0.2);
+// icons added later only add files.
 import { expect, test } from 'vitest';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';

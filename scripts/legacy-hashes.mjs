@@ -3,6 +3,7 @@
 // SCSS is excluded: 2.0.0 ships the 1.3.1 fixes.
 // The one intended change in CSS since 1.3.0 is `font-display: block` instead of `auto`
 // (2.0.2, issue #72); it is reverted before hashing, so anything else still fails the check.
+// Icons added later (added-icons.json) may add files next to these, never change them.
 //
 //   node scripts/legacy-hashes.mjs --write <root>   write the fixture from an unpacked 1.3.0 tarball
 //   node scripts/legacy-hashes.mjs [root]           check root (defaults to the repository)
@@ -10,6 +11,7 @@ import { createHash } from 'node:crypto';
 import { readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { join, relative, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { additionFiles } from './additions.mjs';
 
 const repoRoot = fileURLToPath(new URL('..', import.meta.url));
 export const fixturePath = join(repoRoot, 'test/fixtures/legacy-1.3.0.sha256.json');
@@ -49,7 +51,8 @@ export function compareLegacy(root) {
   const actual = hashLegacy(root);
   const missing = Object.keys(expected).filter((file) => !(file in actual));
   const changed = Object.keys(expected).filter((file) => file in actual && actual[file] !== expected[file]);
-  const added = Object.keys(actual).filter((file) => !(file in expected));
+  const allowed = new Set(additionFiles(repoRoot)); // the tarball has no added-icons.json
+  const added = Object.keys(actual).filter((file) => !(file in expected) && !allowed.has(file));
   return { total: Object.keys(expected).length, missing, changed, added };
 }
 

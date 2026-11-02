@@ -3520,6 +3520,9 @@
 .fa-google-plus-square {
   --fa: "\f0d4";
 }
+.fa-google-scholar {
+  --fa: "\e63b";
+}
 .fa-google-wallet {
   --fa: "\f1ee";
 }
@@ -6352,6 +6355,9 @@
 .fa-ticket-simple {
   --fa: "\f3ff";
 }
+.fa-tiktok {
+  --fa: "\e07b";
+}
 .fa-times {
   --fa: "\f00d";
 }
@@ -6417,6 +6423,9 @@
 }
 .fa-traffic-light {
   --fa: "\f637";
+}
+.fa-trailer {
+  --fa: "\e041";
 }
 .fa-train {
   --fa: "\f238";
@@ -6990,6 +6999,9 @@
 }
 .fa-x-ray {
   --fa: "\f497";
+}
+.fa-x-twitter {
+  --fa: "\e61b";
 }
 .fa-xbox {
   --fa: "\f412";
