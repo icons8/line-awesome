@@ -2,6 +2,7 @@
 // Every old glyph must keep its glyph id, codepoint, outline, advance and name, and the tables that
 // do not list glyphs must be untouched, so pages that already use these fonts render as before.
 import { describe, expect, test } from 'vitest';
+import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { inflateSync } from 'node:zlib';
 import { join } from 'node:path';
@@ -39,6 +40,15 @@ const outline = (glyph) => JSON.stringify(glyph.path.commands);
 
 test('the committed fonts and CSS match font-source/, svg/ and added-icons.json (run npm run build:font)', async () => {
   expect(await staleFiles(root)).toEqual([]);
+});
+
+test('font-source/1.3.0 is the original 1.3.0: its fonts hash the same as the legacy 1.3.0 fixture', () => {
+  const legacy = JSON.parse(read('test/fixtures/legacy-1.3.0.sha256.json'));
+  for (const name of Object.values(FONT_OF_STYLE)) {
+    const expected = legacy[`${FONTS_DIR}/${name}.ttf`];
+    expect(expected, `${name}.ttf is in the fixture`).toMatch(/^[0-9a-f]{64}$/);
+    expect(createHash('sha256').update(read(`${SOURCE_DIR}/${name}.ttf`)).digest('hex'), name).toBe(expected);
+  }
 });
 
 test('added icons have unique codepoints, none of them taken by a 1.3.0 glyph of any font', () => {

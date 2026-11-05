@@ -157,6 +157,8 @@ Icons added after 1.3.0 (`la-x-twitter`, `la-tiktok`, `la-sparkles` and others, 
 <i class="lab la-x-twitter"></i>
 ```
 
+Use the style class of the icon's font: `las` for the new solid icons and `lab` for the new brands (`lab la-x-twitter`); `la la-sparkles` without `las`, or `lar la-sparkles`, shows nothing.
+
 As SVG icons they need nothing extra either: `labXTwitter` is exported like any other icon.
 
 The old `.eot` and `.svg` fonts (Internet Explorer 8 and older) are not rebuilt and have no added icons. Every other browser uses WOFF2, WOFF or TTF.
