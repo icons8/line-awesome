@@ -7,3 +7,4 @@ node_modules
 /examples/*/dist
 /examples/*/.nuxt
 /examples/*/.output
+test-visual/output

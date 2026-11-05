@@ -2,18 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## Unreleased
-
-### Added
-
-- 11 icons requested on GitHub: `la-x-twitter` (#95, #105, #108, #112), `la-tiktok` (#94), `la-google-scholar` (#109), `la-jira-service-desk` (#65), `la-sparkles` for AI (#104), `la-repeat-one` (#110), `la-trailer` (#106), `la-rat` (#70), `la-lipstick`, `la-nail-polish` and `la-perfume` (#66). The Twitter bird stays as it was.
-- They ship as SVG modules (`labXTwitter`, `lasSparkles`, …), in `icons.json`, and as a font with its own stylesheet, `dist/line-awesome-additions/css/line-awesome-additions.min.css`. The 1.3.0 font and CSS are unchanged.
-- `npm run build:font` builds that font and CSS from `svg/` and `added-icons.json`.
-
 ## 2.1.0
 
 ### Added
 
+- 11 icons requested on GitHub: `la-x-twitter` (#95, #105, #108, #112), `la-tiktok` (#94), `la-google-scholar` (#109), `la-jira-service-desk` (#65), `la-sparkles` for AI (#104), `la-repeat-one` (#110), `la-trailer` (#106), `la-rat` (#70), `la-lipstick`, `la-nail-polish` and `la-perfume` (#66). The Twitter bird stays as it was.
+- They ship as SVG modules (`labXTwitter`, `lasSparkles`, …), in `icons.json`, and in the main fonts and `line-awesome.css` / `line-awesome.min.css`, not in a separate font: their glyphs are appended to `la-solid-900` and `la-brands-400` (`.ttf`, `.woff`, `.woff2`) and their classes to the end of the CSS, so no extra stylesheet is needed. Use `las` for the new solid icons and `lab` for the new brands. Existing glyphs keep their codepoints, ids and shapes. The legacy `.eot` and `.svg` fonts have no added icons.
+- `npm run build:font` builds the fonts and the CSS block from `font-source/1.3.0` (the 1.3.0 TrueType fonts), `svg/` and `added-icons.json`; `npm run build:all-icons` writes `examples/all-icons/index.html`, a page with every icon; `npm run test:visual` renders it in a browser with the 1.3.0 fonts and with the new ones and compares the pixels.
 - Font Awesome 6 and 7 compatibility: `dist/font-awesome-6-7-line-awesome/css/all.min.css` replaces the Font Awesome stylesheet without changes to the markup. It knows the names of Font Awesome Free 6.7.2 and 7.3.1 and their old names, the `fa-solid`/`fa-regular`/`fa-brands` and `fas`/`far`/`fab` prefixes and the utility classes, and maps the Font Awesome 6/7 font families to the Line Awesome fonts. Icons are as wide as their glyph, as in Font Awesome 6; `:root { --fa-width: 1.25em; }` gives the fixed width of Font Awesome 7. It covers 76% of the free Font Awesome 6.7.2 icons and 72% of 7.3.1.
 - Font Awesome 6/7 names that Line Awesome lacks as exports (`lasHouse` → `lasHome`), as aliases in `icons.json`, and under `fa` in `metadata.json`.
 
@@ -27,7 +22,7 @@ All notable changes to this project will be documented in this file.
 
 ### Unchanged
 
-- The 1.x CSS, fonts and the Font Awesome 5 shim stay at the same paths and match 1.3.0 byte for byte, except `font-display: block` (see Fixed).
+- The 1.x CSS, fonts and the Font Awesome 5 shim stay at the same paths. They match 1.3.0 byte for byte, except `font-display: block` (see Fixed), the glyphs and classes of the added icons at the end of `la-solid-900` and `la-brands-400` (`.ttf`, `.woff`, `.woff2`) and of the CSS, and `.eot` and `.svg` fonts, which stay exactly as in 1.3.0.
 
 ## 2.0.1
 

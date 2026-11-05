@@ -6,7 +6,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { compareLegacy } from '../scripts/legacy-hashes.mjs';
-import { additionFiles } from '../scripts/additions.mjs';
+import { additionFiles, readAdditions } from '../scripts/additions.mjs';
 
 const root = fileURLToPath(new URL('..', import.meta.url));
 const manifest = JSON.parse(readFileSync(join(root, 'package.json'), 'utf8'));
@@ -31,8 +31,10 @@ test('legacy files inside the tarball match line-awesome@1.3.0', () => {
   expect({ missing, changed, added }).toEqual({ missing: [], changed: [], added: [] });
 });
 
-test('the tarball ships the icons added after 1.3.0 with their font and CSS', () => {
+test('the tarball ships the icons added after 1.3.0: svg files, and glyphs and classes in the main font and CSS', () => {
   for (const file of additionFiles(root)) expect(existsSync(join(pkg, file)), file).toBe(true);
+  for (const { base } of readAdditions(root)) expect(readFileSync(join(pkg, 'dist/line-awesome/css/line-awesome.min.css'), 'utf8')).toContain(`.la-${base}:before`);
+  expect(existsSync(join(pkg, 'dist/line-awesome-additions'))).toBe(false);
 });
 
 test('every exports target exists in the tarball', () => {
