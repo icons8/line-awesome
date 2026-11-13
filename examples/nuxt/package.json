@@ -6,7 +6,7 @@
     "build": "nuxt build"
   },
   "dependencies": {
-    "nuxt": "^4.6.3",
+    "nuxt": "^4.6.4",
     "vue": "^3.5.43"
   },
   "devDependencies": {
